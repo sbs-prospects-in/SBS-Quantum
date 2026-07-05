@@ -5,7 +5,7 @@ import TerminalDeliverables from '../../shared/TerminalDeliverables';
 
 export default function LayoutTimeline({ service }) {
   return (
-    <div className="bg-white dark:bg-[#050505] min-h-screen py-32 relative transition-colors duration-500">
+    <div className="bg-white dark:bg-[#050505] min-h-screen py-16 md:py-32 relative transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="relative max-w-4xl mx-auto">
@@ -18,7 +18,7 @@ export default function LayoutTimeline({ service }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="relative flex flex-col md:flex-row items-center mb-32"
+            className="relative flex flex-col md:flex-row items-center mb-16 md:mb-32"
           >
             <div className="hidden md:block md:w-1/2 pr-16 text-right">
               <h2 className="text-4xl font-display font-bold text-brand-text dark:text-white mb-4">The Status Quo</h2>
@@ -45,7 +45,7 @@ export default function LayoutTimeline({ service }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="relative flex flex-col md:flex-row-reverse items-center mb-32"
+            className="relative flex flex-col md:flex-row-reverse items-center mb-16 md:mb-32"
           >
             <div className="hidden md:block md:w-1/2 pl-16 text-left">
               <h2 className="text-4xl font-display font-bold text-brand-text dark:text-white mb-4">Our Intervention</h2>
@@ -72,7 +72,7 @@ export default function LayoutTimeline({ service }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="relative flex flex-col md:flex-row items-start mb-32"
+            className="relative flex flex-col md:flex-row items-start mb-16 md:mb-32"
           >
             <div className="hidden md:block md:w-1/2 pr-16 text-right pt-8">
               <h2 className="text-4xl font-display font-bold text-brand-text dark:text-white mb-4">The Output</h2>
@@ -102,7 +102,7 @@ export default function LayoutTimeline({ service }) {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="relative flex justify-center mt-32"
+            className="relative flex justify-center mt-16 md:mt-32"
           >
             <div className="bg-white dark:bg-[#050505] p-2 z-10 relative transition-colors duration-500">
               <Link 

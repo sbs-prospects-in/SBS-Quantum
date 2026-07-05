@@ -5,18 +5,18 @@ import TerminalDeliverables from '../../shared/TerminalDeliverables';
 
 export default function LayoutBrutalist({ service }) {
   return (
-    <div className="bg-white dark:bg-[#050505] min-h-screen py-32 transition-colors duration-500">
+    <div className="bg-white dark:bg-[#050505] min-h-screen py-16 md:py-32 transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Problem & Approach Interlocking Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-40">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 mb-20 md:mb-40">
           {/* The Problem */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="bg-brand-text dark:bg-[#0a0a0a] text-white p-12 md:p-16 rounded-3xl relative overflow-hidden group shadow-2xl dark:border dark:border-white/5 transition-colors duration-500"
+            className="bg-brand-text dark:bg-[#0a0a0a] text-white p-8 md:p-12 lg:p-16 rounded-3xl relative overflow-hidden group shadow-2xl dark:border dark:border-white/5 transition-colors duration-500"
           >
             <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity duration-500">
               <AlertOctagon size={160} />
@@ -38,7 +38,7 @@ export default function LayoutBrutalist({ service }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="bg-brand-muted/5 dark:bg-[#111] border-2 border-brand-muted/20 dark:border-white/5 p-12 md:p-16 rounded-3xl relative overflow-hidden group lg:mt-16 transition-colors duration-500"
+            className="bg-brand-muted/5 dark:bg-[#111] border-2 border-brand-muted/20 dark:border-white/5 p-8 md:p-12 lg:p-16 rounded-3xl relative overflow-hidden group lg:mt-16 transition-colors duration-500"
           >
             <div className="absolute top-0 right-0 p-8 text-brand-muted opacity-10 group-hover:opacity-20 transition-opacity duration-500">
               <Target size={160} />
@@ -64,7 +64,7 @@ export default function LayoutBrutalist({ service }) {
             transition={{ duration: 0.8 }}
             className="md:col-span-7"
           >
-            <h2 className="text-4xl font-display font-bold text-brand-text dark:text-white mb-12">Concrete Deliverables</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-text dark:text-white mb-8 md:mb-12">Concrete Deliverables</h2>
             <TerminalDeliverables deliverables={service.deliverables} />
           </motion.div>
 
@@ -75,8 +75,8 @@ export default function LayoutBrutalist({ service }) {
             transition={{ duration: 0.8 }}
             className="md:col-span-5"
           >
-            <div className="bg-[#DBBA95] dark:bg-brand-muted/10 dark:border dark:border-brand-muted/20 text-white p-12 rounded-3xl sticky top-32 shadow-[0_20px_60px_-15px_rgba(190,140,83,0.3)] dark:shadow-none transition-colors duration-500">
-              <h3 className="text-4xl font-display font-bold mb-6 leading-tight text-[#463B26] dark:text-white">Ready to execute?</h3>
+            <div className="bg-[#DBBA95] dark:bg-brand-muted/10 dark:border dark:border-brand-muted/20 text-white p-8 md:p-12 rounded-3xl sticky top-32 shadow-[0_20px_60px_-15px_rgba(190,140,83,0.3)] dark:shadow-none transition-colors duration-500">
+              <h3 className="text-3xl md:text-4xl font-display font-bold mb-6 leading-tight text-[#463B26] dark:text-white">Ready to execute?</h3>
               <p className="text-[#463B26]/80 dark:text-brand-text/60 dark:text-white/60 mb-10 text-lg leading-relaxed font-medium">
                 Tell us about your specific constraints. We respond within 24 hours with an actionable path forward.
               </p>

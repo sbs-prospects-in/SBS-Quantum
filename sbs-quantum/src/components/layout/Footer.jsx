@@ -18,7 +18,7 @@ export default function Footer() {
       
       {!hideCTA && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-32 text-center">
-          <h2 className="text-5xl md:text-8xl font-display font-bold text-brand-text mb-8 tracking-tight">
+          <h2 className="text-4xl md:text-7xl lg:text-8xl font-display font-bold text-brand-text mb-8 tracking-tight">
             Ready to leap?
           </h2>
           <p className="text-xl md:text-2xl text-brand-accent dark:text-white/80 mb-12 max-w-2xl mx-auto">

@@ -235,7 +235,7 @@ export default function Navbar() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             type="button"
-            className="inline-flex items-center justify-center p-2 rounded-full text-white hover:bg-white/10 focus:outline-none"
+            className="inline-flex items-center justify-center p-2 rounded-full text-brand-text hover:bg-brand-text/10 focus:outline-none"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -249,7 +249,7 @@ export default function Navbar() {
             animate={{ height: "auto", opacity: 1, y: 0 }}
             exit={{ height: 0, opacity: 0, y: -10 }}
             transition={{ duration: 0.3, type: "spring", bounce: 0.2 }}
-            className="md:hidden mt-4 bg-[#050505]/95 backdrop-blur-2xl rounded-2xl shadow-2xl border border-white/10 overflow-hidden"
+            className="md:hidden mt-4 bg-brand-surface/95 backdrop-blur-2xl rounded-2xl shadow-2xl border border-brand-border overflow-hidden"
           >
             <div className="px-4 py-6 space-y-2">
               {NAV_ITEMS.map((item) => (

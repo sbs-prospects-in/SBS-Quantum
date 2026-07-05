@@ -5,7 +5,7 @@ import TerminalDeliverables from '../../shared/TerminalDeliverables';
 
 export default function LayoutMinimal({ service }) {
   return (
-    <div className="bg-brand-surface dark:bg-[#020202] min-h-screen py-32 relative overflow-hidden transition-colors duration-500">
+    <div className="bg-brand-surface dark:bg-[#020202] min-h-screen py-16 md:py-32 relative overflow-hidden transition-colors duration-500">
       
       {/* Soft background glows */}
       <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-brand-muted/5 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
@@ -19,7 +19,7 @@ export default function LayoutMinimal({ service }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="mb-32"
+          className="mb-16 md:mb-32"
         >
           <span className="inline-block py-1 px-3 rounded-full bg-brand-muted/20 text-brand-muted border border-brand-muted/40 text-xs font-bold tracking-widest uppercase mb-8">The Friction</span>
           <h2 className="text-3xl md:text-5xl font-display font-bold text-brand-text dark:text-white leading-tight mb-8">
@@ -33,7 +33,7 @@ export default function LayoutMinimal({ service }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="mb-32 bg-white dark:bg-[#0a0a0a] p-12 md:p-20 rounded-[3rem] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.05)] border border-brand-muted/10 dark:border-white/5 transition-colors duration-500"
+          className="mb-16 md:mb-32 bg-white dark:bg-[#0a0a0a] p-8 md:p-12 lg:p-20 rounded-[3rem] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.05)] border border-brand-muted/10 dark:border-white/5 transition-colors duration-500"
         >
           <span className="inline-block py-1 px-3 rounded-full bg-brand-muted/10 dark:bg-white/5 text-brand-text dark:text-white text-xs font-bold tracking-widest uppercase mb-8">The Solution</span>
           <p className="text-2xl md:text-3xl leading-relaxed font-medium text-brand-text/80 dark:text-brand-text/60 dark:text-white/60">
@@ -47,7 +47,7 @@ export default function LayoutMinimal({ service }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="mb-32 text-left bg-white dark:bg-[#0a0a0a] p-12 rounded-[3rem] shadow-sm border border-brand-muted/10 dark:border-white/5 transition-colors duration-500"
+          className="mb-16 md:mb-32 text-left bg-white dark:bg-[#0a0a0a] p-8 md:p-12 rounded-[3rem] shadow-sm border border-brand-muted/10 dark:border-white/5 transition-colors duration-500"
         >
           <h3 className="text-2xl font-display font-bold text-brand-text dark:text-white mb-8">What you receive:</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
