@@ -23,3 +23,15 @@
     text-wrap: pretty;
   }
 }
+
+@keyframes robotWalk {
+  0% { left: 0%; transform: scaleX(-1); }
+  49.99% { left: calc(100% - 8rem); transform: scaleX(-1); }
+  50% { left: calc(100% - 8rem); transform: scaleX(1); }
+  99.99% { left: 0%; transform: scaleX(1); }
+  100% { left: 0%; transform: scaleX(-1); }
+}
+
+.robot-walk {
+  animation: robotWalk 20s linear infinite;
+}

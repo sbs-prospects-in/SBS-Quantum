@@ -1,10 +1,21 @@
 # SBS-Quantum
 
-Welcome to the SBS-Quantum project repository! 
+A high-performance, visually stunning corporate website for SBS Quantum, an elite engineering and software solutions firm. 
 
-## Directory Structure
-- `sbs-quantum/`: The main application source code (Vite + React project).
-- `reference/`: Reference materials and documentation.
+Built with an emphasis on modern brutalist aesthetics, glassmorphism, micro-interactions, and flawless performance.
+
+## Tech Stack
+- **Framework:** React + Vite
+- **Styling:** Tailwind CSS v4, custom CSS variables, and brutalist utility classes.
+- **Animations:** Framer Motion, custom CSS `@keyframes`, and SVG SMIL animations.
+- **Icons:** Lucide React & React Icons.
+- **Routing:** React Router v7.
+
+## Key Features
+- **Dynamic Homepage:** Custom sticky horizontal scroll galleries, immersive gradients, and magnetic buttons.
+- **Service Pages:** Brutalist service bento boxes and fluid layout structures.
+- **Interactive Footer:** An SVG robot mascot that patrols the bottom of the footer using bulletproof edge-to-edge keyframe tracking.
+- **Career & Contact:** Immersive forms, glitch text reveals, magnetic grid layouts, and cinematic locations maps.
 
 ## Getting Started
 
@@ -14,7 +25,7 @@ To run the application locally:
    ```bash
    cd sbs-quantum
    ```
-2. Install the dependencies:
+2. Install the dependencies (lightweight, cleaned up node_modules):
    ```bash
    npm install
    ```
@@ -24,6 +35,6 @@ To run the application locally:
    ```
 
 ## Scripts
-- `npm run dev` - Starts the development server.
+- `npm run dev` - Starts the Vite development server.
 - `npm run build` - Builds the application for production.
-- `npm run preview` - Locally preview the production build.
+- `npm run preview` - Locally previews the compiled production build.

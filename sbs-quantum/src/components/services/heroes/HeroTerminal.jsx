@@ -18,7 +18,7 @@ export default function HeroTerminal({ title, description }) {
   }, [fullText]);
 
   return (
-    <section className="relative min-h-[70vh] flex items-center bg-[#1a150e] overflow-hidden pt-32 pb-20">
+    <section className="relative min-h-[70vh] flex items-center bg-brand-surface dark:bg-[#020202] overflow-hidden pt-32 pb-20 transition-colors duration-500">
       
       {/* Grid Pattern */}
       <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9IiNkYmJhOTUiIGZpbGwtb3BhY2l0eT0iMSIvPjwvc3ZnPg==')] bg-[length:30px_30px]" />
@@ -35,7 +35,7 @@ export default function HeroTerminal({ title, description }) {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ type: 'spring', damping: 20, stiffness: 80 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white tracking-tight mb-8 leading-[1.1]"
+            className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-brand-text dark:text-white tracking-tight mb-8 leading-[1.1]"
           >
             {title}.
           </motion.h1>
@@ -44,7 +44,7 @@ export default function HeroTerminal({ title, description }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-xl md:text-2xl text-white/60 leading-relaxed font-medium"
+            className="text-xl md:text-2xl text-brand-text/70 dark:text-white/60 leading-relaxed font-medium"
           >
             {description}
           </motion.p>

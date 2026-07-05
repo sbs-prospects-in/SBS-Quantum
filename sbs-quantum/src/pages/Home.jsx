@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight, Code2, Cpu, Globe2, ShieldCheck, Zap, BarChart, Apple, Hexagon, PenTool, Database } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import HoverCard from '../components/shared/HoverCard';
+import HorizontalFeatureGallery from '../components/home/HorizontalFeatureGallery';
 import Ticker from '../components/shared/Ticker';
 import AtomLoader from '../components/home/AtomLoader';
 
@@ -41,7 +42,7 @@ export default function Home() {
   return (
     <PageWrapper>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-white">
+      <section className="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-brand-bg transition-colors duration-500">
         {/* Minimalist Grid Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#DBBA9522_1px,transparent_1px),linear-gradient(to_bottom,#DBBA9522_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
 
@@ -57,7 +58,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ type: 'spring', damping: 20, stiffness: 80 }}
-                className="text-6xl md:text-8xl lg:text-8xl xl:text-9xl font-display font-bold text-brand-text tracking-tighter leading-[0.9] mb-8"
+                className="text-6xl md:text-8xl lg:text-8xl xl:text-9xl font-display font-bold text-brand-text dark:text-brand-accent-light tracking-tighter leading-[0.9] mb-8"
               >
                 Quantum <br />
                 <span className="text-brand-muted">Engineering.</span>
@@ -67,7 +68,7 @@ export default function Home() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2, duration: 1 }}
-                className="text-xl md:text-2xl text-brand-text/70 mb-10 max-w-xl font-medium leading-relaxed"
+                className="text-xl md:text-2xl text-brand-accent dark:text-white/80 mb-10 max-w-xl font-medium leading-relaxed"
               >
                 We engineer enterprise systems that scale to millions of requests. No legacy code. No architectural compromises.
               </motion.p>
@@ -81,7 +82,7 @@ export default function Home() {
                 {/* Von Restorff Effect: This CTA is heavily isolated and highly contrasting */}
                 <Link 
                   to="/contact" 
-                  className="group relative inline-flex items-center justify-center px-10 py-5 rounded-full bg-brand-text text-white font-bold text-lg overflow-hidden shadow-xl hover:shadow-[0_20px_40px_-15px_rgba(190,140,83,0.5)] active:scale-[0.97] transition-all duration-300"
+                  className="group relative inline-flex items-center justify-center px-10 py-5 rounded-full bg-brand-text text-brand-bg font-bold text-lg overflow-hidden shadow-xl hover:shadow-[0_20px_40px_-15px_rgba(190,140,83,0.5)] active:scale-[0.97] transition-all duration-300"
                 >
                   <span className="relative z-10 flex items-center">
                     Start Building <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
@@ -130,48 +131,25 @@ export default function Home() {
       {/* Ticker Section */}
       <Ticker items={TECHNOLOGIES} speed={30} />
 
-      {/* Features Grid using HoverCard */}
-      <section className="py-32 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-4xl md:text-6xl font-display font-bold text-brand-text mb-6 tracking-tight">The SBS Advantage</h2>
-            <p className="text-xl text-brand-text/70">Engineering that respects your business logic and your users' time.</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {FEATURES.map((feature, idx) => (
-              <HoverCard
-                key={feature.title}
-                icon={feature.icon}
-                title={feature.title}
-                description={feature.desc}
-                delay={idx * 0.1}
-              >
-                <Link to="/services" className="inline-flex items-center text-sm font-bold text-brand-text hover:text-brand-muted transition-colors">
-                  Learn more <ArrowRight size={16} className="ml-2" />
-                </Link>
-              </HoverCard>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Horizontal Scrolling Gallery for Features */}
+      <HorizontalFeatureGallery features={FEATURES} />
       
       {/* Testimonials / Proof Section */}
       <section className="py-20 bg-brand-muted/5 border-y border-brand-muted/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-brand-text mb-12">Built for high-stakes environments.</h2>
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-brand-text dark:text-brand-accent-light mb-12">Built for high-stakes environments.</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
               <p className="text-5xl font-bold text-brand-text mb-2">99.99%</p>
-              <p className="text-brand-text/70 font-medium">Uptime guarantee across all managed infrastructure.</p>
+              <p className="text-brand-muted font-medium">Uptime guarantee across all managed infrastructure.</p>
             </div>
             <div>
               <p className="text-5xl font-bold text-brand-text mb-2">&lt;100ms</p>
-              <p className="text-brand-text/70 font-medium">Global API response times via edge computing.</p>
+              <p className="text-brand-muted font-medium">Global API response times via edge computing.</p>
             </div>
             <div>
               <p className="text-5xl font-bold text-brand-text mb-2">SOC2</p>
-              <p className="text-brand-text/70 font-medium">Type II compliant development pipelines.</p>
+              <p className="text-brand-muted font-medium">Type II compliant development pipelines.</p>
             </div>
           </div>
         </div>

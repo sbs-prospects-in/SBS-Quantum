@@ -6,8 +6,8 @@ export default function Ticker({ items, speed = 40 }) {
 
   return (
     <div className="w-full overflow-hidden flex bg-brand-muted/5 py-12 border-y border-brand-muted/10 relative">
-      <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10"></div>
-      <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10"></div>
+      <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-brand-bg to-transparent z-10"></div>
+      <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-brand-bg to-transparent z-10"></div>
       
       <motion.div
         className="flex space-x-16 px-8 items-center"

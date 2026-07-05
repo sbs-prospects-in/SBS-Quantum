@@ -4,7 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 
 export default function HeroRings({ title, description }) {
   return (
-    <section className="relative min-h-[70vh] flex flex-col lg:flex-row bg-white overflow-hidden pt-20 lg:pt-0 border-b border-brand-muted/10">
+    <section className="relative min-h-[70vh] flex flex-col lg:flex-row bg-brand-bg overflow-hidden pt-20 lg:pt-0 border-b border-brand-muted/10">
       
       {/* Left Text Half */}
       <div className="lg:w-1/2 w-full pt-12 lg:pt-32 pb-20 px-4 sm:px-6 lg:px-16 flex flex-col justify-center relative z-10">
@@ -33,7 +33,7 @@ export default function HeroRings({ title, description }) {
       </div>
 
       {/* Right Visual Half - Premium Abstract Geometry */}
-      <div className="lg:w-1/2 w-full min-h-[40vh] lg:min-h-full relative overflow-hidden flex items-center justify-center bg-[#faf8f5]">
+      <div className="lg:w-1/2 w-full min-h-[40vh] lg:min-h-full relative overflow-hidden flex items-center justify-center bg-brand-surface">
         
         {/* Soft glowing background orbs */}
         <div className="absolute w-[800px] h-[800px] bg-brand-muted/10 rounded-full blur-[100px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>

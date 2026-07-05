@@ -26,7 +26,7 @@ export default function Accordion({ items }) {
               <span className={`font-display font-bold text-lg transition-colors ${isOpen ? 'text-brand-text' : 'text-brand-text/80'}`}>
                 {item.title}
               </span>
-              <div className={`flex-shrink-0 ml-4 p-2 rounded-full transition-colors ${isOpen ? 'bg-brand-text text-white' : 'bg-white border border-brand-muted/20 text-brand-text'}`}>
+              <div className={`flex-shrink-0 ml-4 p-2 rounded-full transition-colors ${isOpen ? 'bg-brand-text text-brand-bg' : 'bg-brand-surface border border-brand-muted/20 text-brand-text'}`}>
                 {isOpen ? <Minus size={16} /> : <Plus size={16} />}
               </div>
             </button>

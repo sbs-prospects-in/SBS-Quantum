@@ -1,18 +1,58 @@
 @import "tailwindcss";
 
 @theme {
+  /* ─── Allowed Colors: white, black, #DBBA95, #BE8C53, #463B26 ─────────────── */
+  /* Page background */
   --color-brand-bg: #ffffff;
+  /* Surface backgrounds (cards, modals, navbars) */
   --color-brand-surface: #ffffff;
-  --color-brand-text: #BE8C53;
-  --color-brand-muted: #DBBA95;
-  
-  --color-brand-cyan: #BE8C53;
-  --color-brand-purple: #DBBA95;
-  
+  /* Borders */
+  --color-brand-border: #DBBA95;
+
+  /* Main display text */
+  --color-brand-text: #463B26;
+  /* Icons, active nav, primary accents */
+  --color-brand-muted: #BE8C53;
+  /* Secondary accents, inactive elements */
+  --color-brand-accent: #DBBA95;
+  /* Light text variant */
+  --color-brand-accent-light: #ffffff;
+
+  /* "Start Project" navbar CTA button */
+  --color-brand-block-primary: #BE8C53;
+  --color-brand-block-secondary: #DBBA95;
+  --color-brand-block-text: #ffffff;
+
+  /* Career / Contact cards */
+  --color-brand-card-inactive: #DBBA95;
+  --color-brand-card-active: #BE8C53;
+
+  /* ─── Misc ─────────────────────────────────────────────────────────────── */
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-display: "Space Grotesk", var(--font-sans);
 
-  /* Emil Kowalski custom easings */
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* ─── Dark Mode ──────────────────────────────────────────────────────────── */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  .dark {
+    --color-brand-bg: #111111;
+    --color-brand-surface: #111111;
+    --color-brand-border: #463B26;
+    --color-brand-text: #DBBA95;
+    --color-brand-muted: #BE8C53;
+    --color-brand-accent: #BE8C53;
+    --color-brand-accent-light: #ffffff;
+    
+    --color-brand-block-primary: #DBBA95;
+    --color-brand-block-secondary: #463B26;
+    --color-brand-block-text: #ffffff;
+
+    --color-brand-card-inactive: #463B26;
+    --color-brand-card-active: #BE8C53;
+  }
 }

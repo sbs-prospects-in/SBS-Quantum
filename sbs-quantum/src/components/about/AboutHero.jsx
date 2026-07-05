@@ -48,7 +48,7 @@ export default function AboutHero() {
   return (
     <section 
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white cursor-crosshair pt-20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-surface cursor-crosshair pt-20 transition-colors duration-500"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -138,7 +138,7 @@ export default function AboutHero() {
             variants={textVariants}
             className="flex flex-col md:flex-row items-center justify-center gap-8 text-left max-w-3xl mx-auto"
           >
-            <p className="text-xl md:text-2xl text-brand-text/70 font-medium leading-relaxed border-l-2 border-brand-muted/30 pl-6">
+            <p className="text-xl md:text-2xl text-brand-accent dark:text-white/80 font-medium leading-relaxed border-l-2 border-brand-muted/30 pl-6">
               Most agencies sell you hours. We sell you extreme operational capacity. We strip away the bloat and build bespoke systems that give you an unfair advantage.
             </p>
           </motion.div>

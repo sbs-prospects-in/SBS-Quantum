@@ -21,7 +21,7 @@ function App() {
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">
-          <Suspense fallback={<div className="h-screen flex items-center justify-center bg-white"><AtomLoader /></div>}>
+          <Suspense fallback={<div className="h-screen flex items-center justify-center bg-brand-surface transition-colors duration-500"><AtomLoader /></div>}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
