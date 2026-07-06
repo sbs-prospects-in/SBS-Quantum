@@ -1,16 +1,33 @@
-# React + Vite
+# SBS-Quantum
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Enterprise engineering systems that scale to millions of requests. No legacy code. No architectural compromises.
 
-Currently, two official plugins are available:
+## Services Included
+- Workflow Automation
+- CRM & ERP Development
+- Web Development
+- Mobile Application Development
+- UI/UX Design
+- Dedicated Engineering Teams
+- IT Consulting
+- Cloud Migration & Ops
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Getting Started
 
-## React Compiler
+To run the project locally:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+cd sbs-quantum
+npm install
+npm run dev
+```
 
-## Expanding the Oxlint configuration
+## Tech Stack
+- React
+- Vite
+- Tailwind CSS
+- Framer Motion
+- GSAP
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Design System
+The "Brutalist Enterprise" - minimal, high-contrast, performant, and precise. Please refer to `DESIGN.md` for more detailed information.

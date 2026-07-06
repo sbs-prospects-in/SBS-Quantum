@@ -17,23 +17,23 @@ export const servicesData = {
     heroType: 'terminal',
     layoutStyle: 'timeline',
     title: 'Workflow Automation',
-    description: 'We identify manual bottlenecks and script them out of existence. Your team spends less time on data entry and more time on high-leverage tasks.',
-    problem: 'Your highly paid employees spend hours copying data between disconnected systems. This introduces human error, slows response times, and wastes capital.',
-    approach: 'We audit your daily operations to locate repetitive tasks. We write custom scripts and integrate third-party APIs to handle data synchronization instantly in the background.',
+    description: 'Eliminate repetitive processes and accelerate operational efficiency. We design intelligent automation solutions that streamline business workflows, reduce manual effort, and enable teams to focus on strategic, high-value work.',
+    problem: 'Manual processes and disconnected business systems create unnecessary delays, increase the risk of human error, and limit operational efficiency. As organizations grow, these repetitive tasks consume valuable resources and hinder productivity.',
+    approach: 'We analyze your existing workflows to identify automation opportunities and process bottlenecks. By integrating business applications, automating repetitive tasks, and enabling seamless data exchange, we create efficient workflows that improve accuracy, reduce turnaround times, and support scalable business operations.',
     deliverables: [
-      'Custom API integrations between distinct tools',
-      'Background task workers and cron jobs',
-      'Real-time data synchronization scripts',
-      'Automated reporting and alerting systems'
+      'Custom workflow automation solutions',
+      'API integrations across enterprise systems',
+      'Automated data processing and background task execution',
+      'Real-time dashboards, notifications, and operational reporting'
     ]
   },
   'crm-erp': {
     heroType: 'split',
     layoutStyle: 'minimal',
     title: 'CRM & ERP Development',
-    description: 'We centralize your operations. We build secure, data-rich platforms that give you absolute control over your enterprise data.',
-    problem: 'Generic CRMs lack the specialized fields and workflows required for your specific industry. You end up paying for features you don\'t use while lacking the ones you actually need.',
-    approach: 'We design a centralized relational database tailored to your business entities. We build custom dashboards with strict role-based access controls so every department sees exactly what they need—nothing more, nothing less.',
+    description: 'We unify your business operations. We develop customized CRM and ERP platforms that bring your customers, processes, and business data into one secure ecosystem—giving your teams the visibility and control needed to make smarter decisions.',
+    problem: 'Off-the-shelf CRM and ERP solutions often force businesses into rigid workflows that don\'t align with their operations. As data becomes scattered across multiple systems, collaboration slows down, reporting becomes inconsistent, and operational efficiency suffers.',
+    approach: 'We design centralized platforms tailored to your unique business processes, integrating departments, automating workflows, and providing role-based access to critical information. The result is a scalable system that improves collaboration, streamlines operations, and supports informed decision-making across your organization.',
     deliverables: [
       'Custom relational database schema',
       'Role-based access control (RBAC) implementation',
@@ -45,23 +45,23 @@ export const servicesData = {
     heroType: 'rings',
     layoutStyle: 'timeline',
     title: 'Web Development',
-    description: 'High-performance React web apps. We prioritize sub-100ms load times and intuitive user paths.',
-    problem: 'Slow web applications bleed revenue. Users abandon pages that take longer than three seconds to load, and search engines penalize sluggish performance.',
-    approach: 'We build server-side rendered applications using Next.js. We optimize assets at the build step, utilize edge caching, and eliminate layout shifts to guarantee a fast, accessible user experience.',
+    description: 'Build fast, scalable web experiences that drive business growth. We develop modern web applications and websites that combine exceptional performance, intuitive user experiences, and scalable architecture to support your evolving business needs.',
+    problem: 'Slow-loading websites, outdated technologies, and disconnected digital experiences can reduce customer engagement, impact search visibility, and limit your ability to scale. As user expectations continue to rise, performance and reliability become critical to business success.',
+    approach: 'We build responsive, high-performance web solutions using modern development frameworks and industry best practices. By optimizing application architecture, improving loading performance, and ensuring seamless integrations, we create secure, scalable websites that deliver consistent experiences across every device.',
     deliverables: [
-      'Server-side rendered Next.js application',
-      'Strict WCAG accessibility compliance',
-      'Edge network deployment configuration',
-      'Technical SEO optimization'
+      'Modern web applications built on scalable architectures',
+      'Responsive interfaces with optimized loading performance',
+      'Secure deployment and seamless third-party integrations',
+      'Technical SEO, accessibility, and performance optimization'
     ]
   },
   'mobile-development': {
     heroType: 'split',
     layoutStyle: 'brutalist',
     title: 'Mobile Application Development',
-    description: 'Native iOS and Android applications. We deliver apps with uncompromising performance and strict platform guidelines.',
-    problem: 'Cross-platform mobile frameworks often result in bloated apps that drain battery and feel alien to native users.',
-    approach: 'We build specifically for the target operating system. Whether using Swift for iOS or Kotlin for Android, we prioritize native gesture handling, offline-first architectures, and low memory footprint.',
+    description: 'Native mobile experiences built for performance. We develop high-quality iOS and Android applications that deliver fast performance, intuitive user experiences, and the reliability users expect from native mobile platforms.',
+    problem: 'Many mobile applications prioritize rapid development over long-term performance, resulting in inconsistent user experiences, slower response times, and limited access to platform-specific capabilities as the application grows.',
+    approach: 'We develop platform-specific applications using native technologies, ensuring optimal performance, efficient resource utilization, and seamless integration with device capabilities. Every application is engineered with scalability, security, and maintainability in mind, delivering a consistent experience that evolves alongside your business needs.',
     deliverables: [
       'Native iOS (Swift) or Android (Kotlin) codebase',
       'Offline-first data caching implementation',
@@ -72,58 +72,57 @@ export const servicesData = {
   'ui-ux-design': {
     heroType: 'terminal',
     layoutStyle: 'minimal',
-    title: 'UI/UX Engineering',
-    description: 'We design interfaces that respect the user. High contrast, clear hierarchy, and interaction patterns that reduce cognitive load.',
-    problem: 'Dense, confusing interfaces require extensive user training. Poor design hides critical actions and frustrates operators.',
-    approach: 'We apply psychological UX principles to build predictable layouts. We remove visual noise, establish a clear typographic hierarchy, and ensure every interactive element provides immediate, clear feedback.',
+    title: 'UI/UX Design',
+    description: 'Design experiences that are intuitive, accessible, and built around your users. We create user-centric digital experiences that combine visual clarity, seamless navigation, and thoughtful interactions to improve usability, increase engagement, and support business objectives.',
+    problem: 'Complex interfaces, inconsistent design patterns, and unclear user journeys can slow productivity, increase user frustration, and reduce adoption. When users struggle to complete tasks, business performance suffers.',
+    approach: 'We begin by understanding your users, business goals, and workflows before designing intuitive interfaces that simplify interactions and improve accessibility. Through structured design systems, usability validation, and consistent user experiences, we create digital products that are both functional and engaging.',
     deliverables: [
-      'Interactive Figma prototypes',
-      'Comprehensive design system documentation',
-      'Motion design and micro-interaction specs',
-      'Usability testing reports'
+      'User-centered interface designs tailored to your business',
+      'Interactive prototypes for seamless collaboration and validation',
+      'Scalable design systems with consistent UI components',
+      'Usability testing insights and experience optimization'
     ]
   },
   'hire-developers': {
     heroType: 'split',
     layoutStyle: 'timeline',
     title: 'Dedicated Engineering Teams',
-    description: 'We drop pre-vetted, senior engineering pods directly into your workflow to ship features alongside your internal team.',
-    problem: 'Recruiting senior engineering talent takes months. While you interview candidates, your product roadmap stalls and technical debt compounds.',
-    approach: 'We bypass the hiring phase. We integrate our experienced engineers directly into your Jira boards, Slack channels, and codebases to start committing production code in days, not months.',
+    description: 'Strengthen your software development capabilities with dedicated engineering teams that operate as a natural extension of your organization. Our experts integrate into your existing processes, enabling faster delivery, seamless collaboration, and scalable growth while maintaining the highest standards of quality.',
+    problem: 'Building an in-house engineering team requires significant time, resources, and ongoing investment. Every delay in staffing can slow innovation, postpone product releases, and reduce your competitive advantage.',
+    approach: 'We bridge the talent gap by providing skilled developers who integrate directly into your team and workflows. With immediate collaboration and technical expertise, your projects continue moving forward without interruption, allowing you to focus on business growth.',
     deliverables: [
-      'Immediate access to senior engineering talent',
-      'Seamless integration into existing agile workflows',
-      'Direct contribution to your proprietary codebase',
-      'Continuous knowledge transfer to internal staff'
+      'Experienced engineers ready to contribute from day one',
+      'Seamless integration with your tools, processes, and teams',
+      'Faster product delivery through collaborative development',
+      'Flexible engineering teams that grow with your business'
     ]
   },
   'it-consulting': {
     heroType: 'terminal',
     layoutStyle: 'brutalist',
     title: 'IT Consulting',
-    description: 'Strategic technical guidance. We audit your architecture, mitigate risks, and define the correct technology stack for your next phase of growth.',
-    problem: 'Technical decisions made today permanently impact your company\'s ability to scale. Choosing the wrong database or hosting provider creates expensive rewrite cycles years down the line.',
-    approach: 'We review your codebase, infrastructure, and team capabilities. We provide a deterministic roadmap outlining exactly what to refactor, what to migrate, and what to build from scratch.',
+    description: 'Make technology decisions with clarity and confidence. We provide strategic IT consulting to help businesses align technology with their goals, optimize existing systems, and build a strong foundation for sustainable digital growth.',
+    problem: 'As technology evolves, choosing the right architecture, platforms, and digital solutions becomes increasingly complex. Uninformed decisions can lead to costly rework, operational inefficiencies, security risks, and systems that struggle to scale with your business.',
+    approach: 'We evaluate your current technology landscape, business objectives, and operational requirements to identify opportunities for improvement. Our experts develop practical technology roadmaps, recommend scalable solutions, and guide implementation strategies that reduce risk, improve performance, and support long-term business success.',
     deliverables: [
-      'Comprehensive architecture audit',
-      'Security and compliance vulnerability report',
-      'Cloud migration roadmap',
-      'Technology stack recommendations'
+      'Technology architecture and infrastructure assessment',
+      'Strategic modernization and migration recommendations',
+      'Performance, security, and scalability optimization',
+      'Clear implementation roadmap for future development'
     ]
   },
   'cloud-services': {
     heroType: 'rings',
     layoutStyle: 'minimal',
     title: 'Cloud Migration & Ops',
-    description: 'We move legacy databases to AWS or Azure, set up zero-trust security, and optimize your monthly compute spend.',
-    problem: 'On-premise servers lack the elasticity required for modern web traffic. Managing physical hardware drains engineering resources that should focus on product development.',
-    approach: 'We script your infrastructure using Terraform. We containerize your applications, configure managed Kubernetes clusters, and establish automated deployment pipelines for continuous integration.',
+    description: 'Modernize your infrastructure with secure, scalable cloud solutions. We help businesses migrate critical applications and workloads to the cloud while optimizing infrastructure for performance, security, and long-term operational efficiency.',
+    problem: 'Legacy infrastructure often struggles to support evolving business demands. Limited scalability, high maintenance costs, and outdated deployment processes can slow innovation, increase operational risks, and reduce overall system reliability.',
+    approach: 'We assess your existing infrastructure, develop a tailored cloud migration strategy, and implement modern cloud architectures that enhance scalability, strengthen security, and simplify operations. Through infrastructure automation, continuous deployment, and proactive optimization, we ensure your cloud environment is resilient, efficient, and ready for future growth.',
     deliverables: [
-      'Infrastructure as Code (IaC) configuration',
-      'Kubernetes cluster setup and orchestration',
-      'Automated CI/CD deployment pipelines',
-      'Zero-trust network security policies'
+      'Cloud migration strategy and seamless workload transition',
+      'Infrastructure automation for consistent deployments',
+      'Secure, scalable cloud environments with continuous monitoring',
+      'DevOps practices that accelerate software delivery and operational efficiency'
     ]
   }
 };
-
