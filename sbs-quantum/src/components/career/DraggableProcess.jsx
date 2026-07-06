@@ -69,7 +69,7 @@ function TiltCard({ step, index }) {
       }}
       whileHover={{ scale: 1.02 }}
       transition={{ type: "spring", stiffness: 400, damping: 30 }}
-      className="w-full md:w-[450px] min-h-[350px] md:min-h-[550px] h-auto self-stretch bg-[#DBBA95] hover:bg-[#BE8C53] dark:bg-[#1a1510] dark:hover:bg-[#3a2e1a] border border-brand-muted/20 dark:border-brand-muted/25 flex flex-col justify-start shrink-0 hover:shadow-[0_20px_60px_-15px_rgba(190,140,83,0.5)] dark:hover:shadow-[0_20px_60px_-10px_rgba(190,140,83,0.25)] transition-all duration-300 pointer-events-auto select-none rounded-2xl group overflow-hidden"
+      className="w-full md:w-[450px] min-h-[350px] md:min-h-[550px] h-auto self-stretch bg-brand-tilt-bg hover:bg-brand-tilt-hover border border-brand-muted/20 dark:border-brand-muted/25 flex flex-col justify-start shrink-0 hover:shadow-[0_20px_60px_-15px_rgba(190,140,83,0.5)] dark:hover:shadow-[0_20px_60px_-10px_rgba(190,140,83,0.25)] transition-colors duration-300 pointer-events-auto select-none rounded-2xl group overflow-hidden"
     >
       <div className="p-8 md:p-12 flex flex-col justify-start h-full">
         <div>
