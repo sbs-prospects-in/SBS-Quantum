@@ -78,7 +78,7 @@ export default function AboutHero() {
               initial="hidden"
               animate="visible"
               variants={textVariants}
-              className="text-5xl md:text-7xl lg:text-9xl font-display font-black text-brand-text tracking-tighter leading-[0.85]"
+              className="text-4xl md:text-7xl lg:text-9xl font-display font-black text-brand-text tracking-tighter leading-[0.85]"
             >
               WE DON'T
             </motion.h1>
@@ -97,7 +97,7 @@ export default function AboutHero() {
               initial="hidden"
               animate="visible"
               variants={textVariants}
-              className="text-5xl md:text-7xl lg:text-9xl font-display font-black text-brand-muted tracking-tighter leading-[0.85]"
+              className="text-4xl md:text-7xl lg:text-9xl font-display font-black text-brand-muted tracking-tighter leading-[0.85]"
             >
               WRITE CODE.
             </motion.h1>
@@ -116,7 +116,7 @@ export default function AboutHero() {
               initial="hidden"
               animate="visible"
               variants={textVariants}
-              className="text-5xl md:text-7xl lg:text-9xl font-display font-black text-brand-text tracking-tighter leading-[0.85]"
+              className="text-4xl md:text-7xl lg:text-9xl font-display font-black text-brand-text tracking-tighter leading-[0.85]"
             >
               WE ENGINEER <br className="md:hidden" />
               <span className="relative inline-block">

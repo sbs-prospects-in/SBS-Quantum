@@ -26,13 +26,7 @@ const TECHNOLOGIES = [
   { name: 'Design Systems', icon: PenTool }
 ];
 
-const UX_LAWS = [
-  'Aesthetic-Usability',
-  'Halo Effect',
-  'Von Restorff',
-  'Zeigarnik',
-  'Peak-End Rule'
-];
+
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -58,7 +52,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ type: 'spring', damping: 20, stiffness: 80 }}
-                className="text-6xl md:text-8xl lg:text-8xl xl:text-9xl font-display font-bold text-brand-text dark:text-brand-accent-light tracking-tighter leading-[0.9] mb-8"
+                className="text-5xl md:text-8xl lg:text-8xl xl:text-9xl font-display font-bold text-brand-text dark:text-brand-accent-light tracking-tighter leading-[0.9] mb-8"
               >
                 Quantum <br />
                 <span className="text-brand-muted">Engineering.</span>
@@ -98,19 +92,7 @@ export default function Home() {
                 </Link>
               </motion.div>
 
-              {/* UX Laws Badges */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.6, duration: 1 }}
-                className="flex flex-wrap gap-3"
-              >
-                {UX_LAWS.map((law, index) => (
-                  <span key={index} className="px-3 py-1 text-xs font-bold uppercase tracking-wider text-brand-muted bg-brand-muted/10 border border-brand-muted/20 rounded-full">
-                    {law}
-                  </span>
-                ))}
-              </motion.div>
+
             </motion.div>
 
             {/* Right Content - AtomLoader */}

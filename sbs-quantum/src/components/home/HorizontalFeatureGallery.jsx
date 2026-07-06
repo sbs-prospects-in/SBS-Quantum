@@ -14,7 +14,7 @@ export default function HorizontalFeatureGallery({ features }) {
   return (
     <>
       {/* MOBILE FALLBACK: Standard Vertical Stack */}
-      <section className="md:hidden py-20 bg-brand-bg relative">
+      <section className="md:hidden py-20 bg-brand-bg relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none border-y border-brand-muted/20"></div>
         <div className="px-6 space-y-24 relative z-10">
           {features.map((feature, idx) => (

@@ -83,7 +83,7 @@ export default function AmbientHero() {
 
       <div 
         className="absolute inset-0 z-0 pointer-events-none opacity-20 mix-blend-overlay"
-        style={{ backgroundImage: 'url(https://grainy-gradients.vercel.app/noise.svg)' }}
+        style={{ backgroundImage: 'url(/noise.svg)' }}
       />
 
       <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center">

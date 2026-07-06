@@ -6,7 +6,7 @@ const INTERVIEW_PROCESS = [
   {
     step: '01',
     title: 'The Alignment Call',
-    content: 'A 30-minute conversation with our technical recruiter. We discuss your background, our current technical challenges, and ensure our compensation bands align with your expectations. No BS.'
+    content: 'A 30-minute conversation with our technical recruiter. We discuss your background, our current technical challenges, and ensure our compensation bands align with your expectations. We keep it direct and transparent, with absolutely no BS or hidden agendas.'
   },
   {
     step: '02',
@@ -16,12 +16,12 @@ const INTERVIEW_PROCESS = [
   {
     step: '03',
     title: 'The Cultural Fit',
-    content: 'A 45-minute meeting with a founding partner. We evaluate how you handle disagreement, scope creep, and architectural trade-offs. We are looking for absolute ownership.'
+    content: 'A 45-minute meeting with a founding partner. We evaluate how you handle disagreement, scope creep, and complex architectural trade-offs under pressure. We are exclusively looking for candidates who demonstrate absolute ownership and extreme accountability.'
   },
   {
     step: '04',
     title: 'The Offer',
-    content: 'We make decisions within 48 hours of the final interview. If we extend an offer, we provide a detailed breakdown of salary, equity, and benefits without exploding deadlines.'
+    content: 'We make final decisions within 48 hours of the last interview. If we extend an offer, we provide a highly detailed breakdown of your salary, equity compensation, and benefits package, completely free of exploding deadlines or pressure tactics.'
   }
 ];
 
@@ -67,24 +67,25 @@ function TiltCard({ step, index }) {
         rotateY,
         transformStyle: "preserve-3d",
       }}
-      whileHover={{ scale: 1.02, backgroundColor: "#BE8C53" }}
+      whileHover={{ scale: 1.02 }}
       transition={{ type: "spring", stiffness: 400, damping: 30 }}
-      className="w-[300px] md:w-[450px] h-[400px] md:h-[550px] bg-[#DBBA95] dark:bg-[#0a0a0a] border border-brand-muted/20 dark:border-white/10 p-8 md:p-12 flex flex-col justify-between shrink-0 hover:shadow-[0_20px_60px_-15px_rgba(190,140,83,0.5)] dark:hover:shadow-[0_0_50px_rgba(212,175,55,0.05)] transition-all pointer-events-auto select-none rounded-2xl group"
+      className="w-full md:w-[450px] min-h-[350px] md:min-h-[550px] h-auto self-stretch bg-[#DBBA95] hover:bg-[#BE8C53] dark:bg-[#1a1510] dark:hover:bg-[#3a2e1a] border border-brand-muted/20 dark:border-brand-muted/25 flex flex-col justify-start shrink-0 hover:shadow-[0_20px_60px_-15px_rgba(190,140,83,0.5)] dark:hover:shadow-[0_20px_60px_-10px_rgba(190,140,83,0.25)] transition-all duration-300 pointer-events-auto select-none rounded-2xl group overflow-hidden"
     >
-      <div style={{ transform: "translateZ(50px)" }}>
-        <span className="text-6xl md:text-8xl font-display font-bold text-brand-muted/20 dark:text-white/5 mb-8 block group-hover:text-brand-text/20 dark:group-hover:text-white/10 transition-colors">
-          {step.step}
-        </span>
-        <h3 className="text-3xl md:text-4xl font-display font-bold text-brand-text dark:text-white mb-6 uppercase tracking-tight transition-colors">
-          {step.title}
-        </h3>
+      <div className="p-8 md:p-12 flex flex-col justify-start h-full">
+        <div>
+          <span className="text-6xl md:text-8xl font-display font-bold text-brand-muted/20 dark:text-brand-muted/15 mb-8 block group-hover:text-brand-text/20 dark:group-hover:text-brand-muted/30 transition-colors">
+            {step.step}
+          </span>
+          <h3 className="text-3xl md:text-4xl font-display font-bold text-brand-text dark:text-[#f0dcc0] mb-6 uppercase tracking-tight transition-colors min-h-[4.5rem] md:min-h-[5rem]">
+            {step.title}
+          </h3>
+        </div>
+        <p 
+          className="text-lg md:text-xl text-brand-text/70 dark:text-[#c4a882]/80 leading-relaxed"
+        >
+          {step.content}
+        </p>
       </div>
-      <p 
-        style={{ transform: "translateZ(30px)" }}
-        className="text-lg md:text-xl text-brand-text/70 dark:text-brand-text/60 dark:text-white/60 leading-relaxed"
-      >
-        {step.content}
-      </p>
     </motion.div>
   );
 }
@@ -111,7 +112,7 @@ export default function DraggableProcess() {
     <section className="bg-brand-bg dark:bg-[#050505] py-32 text-brand-text dark:text-white border-t border-brand-border dark:border-white/5 overflow-hidden">
       <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between">
+        <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-center justify-between">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -136,10 +137,17 @@ export default function DraggableProcess() {
           </motion.div>
         </div>
 
-        {/* Draggable Physics Container */}
+        {/* MOBILE FALLBACK: Standard Vertical Stack */}
+        <div className="md:hidden flex flex-col space-y-6">
+          {INTERVIEW_PROCESS.map((step, idx) => (
+            <TiltCard key={step.step} step={step} index={idx} />
+          ))}
+        </div>
+
+        {/* DESKTOP: Draggable Physics Container */}
         <motion.div 
           ref={carouselRef} 
-          className={`pb-12 ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+          className={`hidden md:block pb-12 ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
           whileTap={{ cursor: "grabbing" }}
           onPointerDown={() => setIsDragging(true)}
           onPointerUp={() => setIsDragging(false)}
@@ -149,7 +157,7 @@ export default function DraggableProcess() {
             dragConstraints={{ right: 0, left: -width }} 
             dragElastic={0.15}
             dragTransition={{ bounceStiffness: 400, bounceDamping: 25 }}
-            className="flex space-x-6 md:space-x-12 w-max px-4 md:px-0"
+            className="flex items-stretch space-x-12 w-max"
             style={{ perspective: 1000 }}
           >
             {INTERVIEW_PROCESS.map((step, idx) => (
