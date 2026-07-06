@@ -64,9 +64,10 @@ function JobCard({ job, onClick }) {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="group relative h-80 overflow-hidden cursor-pointer bg-[#DBBA95] rounded-2xl shadow-sm hover:shadow-xl border border-white/20"
-      whileHover={{ scale: 0.98, backgroundColor: '#BE8C53' }}
+      className="group relative h-80 overflow-hidden cursor-pointer bg-brand-card-inactive hover:bg-brand-card-active transition-colors duration-300 rounded-2xl shadow-sm hover:shadow-xl border border-white/20"
+      whileHover={{ scale: 0.98 }}
       transition={{ type: "spring", stiffness: 400, damping: 30 }}
+
     >
       {/* Dynamic Cursor Spotlight */}
       <motion.div 
@@ -117,7 +118,7 @@ export default function ExpandableJobGrid() {
   const [selectedJob, setSelectedJob] = useState(null);
 
   return (
-    <section className="bg-brand-bg dark:bg-[#020202] py-32 text-brand-text dark:text-white border-t border-brand-border dark:border-white/10 relative">
+    <section className="bg-brand-bg dark:bg-[#020202] transition-colors duration-300 py-32 text-brand-text dark:text-white border-t border-brand-border dark:border-white/10 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <motion.div 
@@ -200,12 +201,12 @@ export default function ExpandableJobGrid() {
                     transition={{ delay: 0.3 }}
                   >
                     <h4 className="text-xl font-display font-bold text-brand-text dark:text-white mb-4">The Role</h4>
-                    <p className="text-brand-muted dark:text-brand-text/60 dark:text-white/60 leading-relaxed text-lg mb-8">
+                    <p className="text-brand-accent dark:text-white/60 leading-relaxed text-lg mb-8">
                       {selectedJob.desc}
                     </p>
 
                     <h4 className="text-xl font-display font-bold text-brand-text dark:text-white mb-4">Requirements</h4>
-                    <ul className="list-disc list-inside text-brand-text/70 dark:text-brand-text/60 dark:text-white/60 space-y-3 mb-12 text-lg">
+                    <ul className="list-disc list-inside text-brand-text/70 dark:text-white/60 space-y-3 mb-12 text-lg">
                       <li>5+ years of experience in high-performance environments.</li>
                       <li>Deep understanding of systems architecture.</li>
                       <li>Ability to operate with complete autonomy.</li>

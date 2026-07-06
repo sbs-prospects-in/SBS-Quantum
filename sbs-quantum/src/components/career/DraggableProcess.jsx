@@ -109,7 +109,7 @@ export default function DraggableProcess() {
   }, []);
 
   return (
-    <section className="bg-brand-bg dark:bg-[#050505] py-32 text-brand-text dark:text-white border-t border-brand-border dark:border-white/5 overflow-hidden">
+    <section className="bg-brand-bg dark:bg-[#050505] transition-colors duration-300 py-32 text-brand-text dark:text-white border-t border-brand-border dark:border-white/5 overflow-hidden">
       <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-center justify-between">

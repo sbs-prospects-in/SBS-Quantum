@@ -41,7 +41,7 @@ export default function MagneticHero() {
   const words2 = "COLLECTIVE".split(" ");
 
   return (
-    <section className="relative w-full min-h-screen bg-brand-bg flex flex-col items-center justify-center text-brand-text overflow-hidden px-4 py-32">
+    <section className="relative w-full min-h-screen bg-brand-bg dark:bg-[#050505] transition-colors duration-300 flex flex-col items-center justify-center text-brand-text dark:text-white overflow-hidden px-4 py-32">
       
       {/* Background radial gradient to give depth */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.05)_0%,transparent_70%)] dark:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_0%,transparent_70%)] pointer-events-none" />
@@ -66,7 +66,7 @@ export default function MagneticHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 1 }}
-          className="mt-16 text-xl md:text-2xl text-brand-accent dark:text-brand-muted max-w-2xl text-center font-medium tracking-wide pointer-events-none"
+          className="mt-16 text-xl md:text-2xl text-brand-muted dark:text-brand-accent max-w-2xl text-center font-medium tracking-wide pointer-events-none"
         >
           Hover over the text. Feel the physics. We build interfaces that breathe.
         </motion.p>
