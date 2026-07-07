@@ -113,7 +113,7 @@ export default function Navbar() {
       <div 
         ref={navRef}
         onMouseLeave={() => setHoverX(null)}
-        className="relative flex items-center justify-between h-20 bg-brand-surface/90 backdrop-blur-2xl rounded-2xl px-6 lg:px-8 shadow-2xl border border-brand-border transition-colors duration-500"
+        className="relative flex items-center justify-between h-16 md:h-20 bg-brand-surface/90 backdrop-blur-2xl rounded-full md:rounded-2xl px-6 lg:px-8 shadow-2xl border border-brand-border transition-colors duration-500"
       >
         <DigitalEntity targetX={hoverX} />
 
@@ -267,6 +267,17 @@ export default function Navbar() {
                   {item.label}
                 </Link>
               ))}
+
+              <div className="pt-4 mt-2 border-t border-brand-border flex items-center justify-between px-4">
+                <span className="text-sm font-bold uppercase tracking-wider text-brand-text/80">Theme</span>
+                <button
+                  onClick={toggleTheme}
+                  className="p-2.5 rounded-full bg-brand-text/5 text-brand-text hover:bg-brand-text/10 transition-colors duration-300"
+                  aria-label="Toggle theme"
+                >
+                  {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+                </button>
+              </div>
             </div>
           </motion.div>
         )}
