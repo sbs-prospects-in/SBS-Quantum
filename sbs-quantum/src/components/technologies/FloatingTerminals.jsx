@@ -62,11 +62,11 @@ export default function FloatingTerminals() {
       </div>
 
       <div className="absolute top-32 left-1/2 -translate-x-1/2 text-center z-0 w-full max-w-3xl px-4">
-        <p className="text-brand-text font-mono text-sm tracking-widest uppercase mb-4">Interactive Architecture</p>
+        <p className="text-brand-text font-mono text-sm tracking-widest uppercase mb-4">SYSTEM INFRASTRUCTURE ARCHITECTURE</p>
         <h2 className="text-5xl md:text-7xl font-display font-bold text-brand-text dark:text-brand-accent-light uppercase tracking-tight mb-6">
-          The Matrix.
+          Interactive Topology Simulation
         </h2>
-        <p className="text-brand-text/60 text-xl font-medium">Grab and drag the terminal instances.</p>
+        <p className="text-brand-text/60 text-xl font-medium">Interact with the environment by dragging the individual service nodes.</p>
       </div>
 
       <div ref={constraintsRef} className="w-full max-w-6xl h-[600px] relative z-10 mx-auto mt-40 flex items-center justify-center">

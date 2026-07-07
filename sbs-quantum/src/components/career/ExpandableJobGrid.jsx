@@ -7,33 +7,53 @@ const JOBS = [
     id: 'frontend',
     title: 'Senior Frontend Engineer', 
     type: 'Full-time', 
-    location: 'Remote (US/EU)',
+    location: 'Remote',
     img: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200',
-    desc: 'You will architect the visual layer of our core infrastructure platform. We expect sub-100ms interactions, zero layout shifts, and an obsessive attention to motion engineering.'
+    desc: 'You will lead the development of the user interface for our core digital platform, creating fast, responsive, and intuitive experiences with a strong emphasis on performance and interaction quality.',
+    requirements: [
+      '5+ years of experience in high-performance development environments.',
+      'Strong understanding of modern frontend architecture and application design.',
+      'Ability to work independently while collaborating effectively within a team.'
+    ]
   },
   { 
     id: 'backend',
     title: 'Backend Infrastructure Engineer', 
     type: 'Full-time', 
-    location: 'New York, NY',
+    location: 'Remote',
     img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200',
-    desc: 'Go microservices, raw computational speed, and edge processing. You will design systems that scale flawlessly under extreme concurrency.'
+    desc: 'Design and develop scalable backend infrastructure that supports high-performance applications, ensuring reliability, efficiency, and long-term maintainability across critical systems.',
+    requirements: [
+      '5+ years of experience in high-performance development environments.',
+      'Strong understanding of distributed systems and backend architecture.',
+      'Ability to work independently with a solution-oriented mindset.'
+    ]
   },
   { 
     id: 'design',
     title: 'Principal UI/UX Designer', 
     type: 'Full-time', 
-    location: 'Remote (US)',
+    location: 'Remote',
     img: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=1200',
-    desc: 'Drive the aesthetic direction of our enterprise tools. Turn complex data matrices into intuitive, beautiful, and tactile interfaces.'
+    desc: 'Lead the visual direction of enterprise digital products by designing intuitive, user-focused interfaces that simplify complex workflows while delivering engaging user experiences.',
+    requirements: [
+      '5+ years of experience designing digital products in fast-paced environments.',
+      'Strong understanding of user experience principles and design systems.',
+      'Ability to take ownership of projects from concept through execution.'
+    ]
   },
   { 
     id: 'sre',
     title: 'Site Reliability Engineer', 
     type: 'Full-time', 
-    location: 'London, UK',
+    location: 'Remote',
     img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200',
-    desc: 'Keep the lights on when the world depends on it. Manage our multi-region Kubernetes clusters and ensure absolute 99.99% uptime.'
+    desc: 'Ensure the reliability, availability, and performance of production systems by maintaining scalable infrastructure and supporting continuous operational excellence.',
+    requirements: [
+      '5+ years of experience managing production infrastructure.',
+      'Strong understanding of system reliability, monitoring, and incident response.',
+      'Ability to troubleshoot complex technical issues with minimal supervision.'
+    ]
   }
 ];
 
@@ -132,7 +152,7 @@ export default function ExpandableJobGrid() {
             Open <span className="text-brand-text">Positions.</span>
           </h2>
           <p className="mt-4 text-xl text-brand-accent dark:text-white/80 max-w-xl">
-            Hover over a card to illuminate it. Click to expand into the spatial grid.
+            Discover roles where your expertise can contribute to building reliable software, modern digital experiences, and scalable technology solutions.
           </p>
         </motion.div>
 
@@ -207,9 +227,9 @@ export default function ExpandableJobGrid() {
 
                     <h4 className="text-xl font-display font-bold text-brand-text dark:text-white mb-4">Requirements</h4>
                     <ul className="list-disc list-inside text-brand-text/70 dark:text-white/60 space-y-3 mb-12 text-lg">
-                      <li>5+ years of experience in high-performance environments.</li>
-                      <li>Deep understanding of systems architecture.</li>
-                      <li>Ability to operate with complete autonomy.</li>
+                      {selectedJob.requirements.map((req, idx) => (
+                        <li key={idx}>{req}</li>
+                      ))}
                     </ul>
 
                     <button className="group w-full flex items-center justify-center py-5 bg-brand-text hover:bg-brand-bg text-white dark:text-[#050505] text-lg font-bold uppercase tracking-widest transition-colors duration-300 rounded-xl overflow-hidden relative">

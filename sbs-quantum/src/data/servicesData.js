@@ -17,9 +17,9 @@ export const servicesData = {
     heroType: 'terminal',
     layoutStyle: 'timeline',
     title: 'Workflow Automation',
-    description: 'Eliminate repetitive processes and accelerate operational efficiency. We design intelligent automation solutions that streamline business workflows, reduce manual effort, and enable teams to focus on strategic, high-value work.',
-    problem: 'Manual processes and disconnected business systems create unnecessary delays, increase the risk of human error, and limit operational efficiency. As organizations grow, these repetitive tasks consume valuable resources and hinder productivity.',
-    approach: 'We analyze your existing workflows to identify automation opportunities and process bottlenecks. By integrating business applications, automating repetitive tasks, and enabling seamless data exchange, we create efficient workflows that improve accuracy, reduce turnaround times, and support scalable business operations.',
+    description: 'Manual processes slow down teams, create inconsistencies, and consume valuable time. We design intelligent workflow automation systems that streamline operations and let your business focus on what matters most.',
+    problem: 'Many organizations still rely on repetitive manual tasks, disconnected tools, and approval chains that increase delays, errors, and operational costs. As the business grows, these inefficiencies become harder to manage.',
+    approach: 'We analyze your existing workflows, identify automation opportunities, and build integrated solutions that connect your systems, automate repetitive tasks, and provide complete visibility across business operations.',
     deliverables: [
       'Custom workflow automation solutions',
       'API integrations across enterprise systems',

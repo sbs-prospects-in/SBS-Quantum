@@ -84,13 +84,13 @@ export default function HeroGSAP() {
             </span>
           </div>
           <div className="overflow-hidden">
-            <span ref={text2Ref} className="block text-brand-text">heavy infrastructure.</span>
+            <span ref={text2Ref} className="block text-brand-text">modern IT ecosystems.</span>
           </div>
         </h1>
 
         <div className="mt-16 md:mt-32 w-full max-w-lg">
           <p className="text-xl md:text-2xl text-brand-muted dark:text-brand-text/60 dark:text-white/60 leading-relaxed">
-            No fluff. Just raw, distributed systems designed for relentless throughput and scale.
+            No legacy roadblocks. Just high-performance, cloud-native infrastructure engineered for modern enterprises and digital transformation.
           </p>
         </div>
 

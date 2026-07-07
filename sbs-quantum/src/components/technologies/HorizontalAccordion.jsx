@@ -5,19 +5,19 @@ const ACCORDION_DATA = [
   {
     id: 1,
     title: 'Interface Layer',
-    desc: 'React architecture optimized for sub-100ms Largest Contentful Paint. Zero layout shifts. Hardware-accelerated interaction models.',
+    desc: 'User interfaces are engineered for responsiveness, accessibility, and consistency. We optimize rendering performance, minimize layout instability, and deliver seamless interactions that enhance user experience across devices and platforms.',
     img: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 2,
     title: 'Distributed Core',
-    desc: 'Go microservices built for raw computational speed. Node.js edge functions handling rapid I/O. Relentless throughput.',
+    desc: 'Our application architecture is designed for scalability, resilience, and efficient processing. Modular services and event-driven components enable reliable performance under varying workloads while supporting rapid feature delivery and long-term maintainability.',
     img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 3,
     title: 'Cloud Native',
-    desc: 'Multi-region failover setups on AWS and GCP. Managed Kubernetes clusters. 99.99% uptime guaranteed by design.',
+    desc: 'Cloud infrastructure is built for availability, scalability, and operational resilience. We implement containerized workloads, automated deployment pipelines, and multi-region architectures that support business continuity, high availability, and efficient resource utilization.',
     img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800'
   }
 ];

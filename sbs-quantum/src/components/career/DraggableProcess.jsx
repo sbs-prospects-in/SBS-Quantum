@@ -5,23 +5,23 @@ import { MousePointerClick } from 'lucide-react';
 const INTERVIEW_PROCESS = [
   {
     step: '01',
-    title: 'The Alignment Call',
-    content: 'A 30-minute conversation with our technical recruiter. We discuss your background, our current technical challenges, and ensure our compensation bands align with your expectations. We keep it direct and transparent, with absolutely no BS or hidden agendas.'
+    title: 'THE ALIGNMENT CALL',
+    content: 'A 30-minute introductory conversation with our technical recruiter to discuss your professional background and our current technical initiatives. This call ensures mutual alignment between your career expectations and our compensation structures. We prioritize direct, transparent communication with no hidden agendas.'
   },
   {
     step: '02',
-    title: 'The Architecture Review',
-    content: 'A 90-minute system design session with two senior engineers. No leetcode tricks or whiteboard coding. We review a complex system you built previously or architect a hypothetical system relevant to our stack.'
+    title: 'THE ARCHITECTURE REVIEW',
+    content: 'A 90-minute system design session conducted by two of our senior engineers. Moving beyond standard algorithmic puzzles or abstract whiteboard coding, we focus on practical expertise. Together, we will analyze a complex architecture you have previously delivered or collaboratively design a hypothetical system tailored to our technology stack.'
   },
   {
     step: '03',
-    title: 'The Cultural Fit',
-    content: 'A 45-minute meeting with a founding partner. We evaluate how you handle disagreement, scope creep, and complex architectural trade-offs under pressure. We are exclusively looking for candidates who demonstrate absolute ownership and extreme accountability.'
+    title: 'THE CULTURAL FIT',
+    content: 'A 45-minute engagement with a founding partner to evaluate alignment with our core values. We assess your approach to navigating constructive disagreement, managing scope creep, and balancing complex architectural trade-offs under pressure. We seek professionals who demonstrate complete ownership and high accountability.'
   },
   {
     step: '04',
-    title: 'The Offer',
-    content: 'We make final decisions within 48 hours of the last interview. If we extend an offer, we provide a highly detailed breakdown of your salary, equity compensation, and benefits package, completely free of exploding deadlines or pressure tactics.'
+    title: 'THE OFFER',
+    content: 'We deliver final decisions within 48 hours of your concluding interview. Formal offers include a comprehensive, transparent breakdown of your salary, equity compensation, and benefits package. We maintain a professional, pressure-free evaluation period, ensuring you have adequate time to review our proposal without artificial deadlines.'
   }
 ];
 
