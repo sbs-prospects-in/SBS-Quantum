@@ -9,7 +9,7 @@
 
 @layer base {
   body {
-    @apply text-brand-text bg-brand-bg antialiased selection:bg-brand-text selection:text-brand-bg;
+    @apply text-brand-text bg-brand-bg antialiased selection:bg-brand-text selection:text-brand-bg overflow-x-hidden;
     font-family: var(--font-sans);
   }
 

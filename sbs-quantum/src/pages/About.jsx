@@ -47,7 +47,7 @@ export default function About() {
                 Software should not be an afterthought.
               </h3>
               <p className="text-brand-accent dark:text-white/80 mb-6 leading-relaxed text-lg">
-                <strong className="text-brand-text font-bold">Urval Shash</strong> founded SBS Quantum to fix a specific problem: enterprise systems are too often built with conflicting priorities. Design agencies focus on aesthetics while ignoring architecture. Development shops write logic while ignoring the user interface.
+                <strong className="text-brand-text font-bold">Urval Shah</strong> founded SBS Quantum to fix a specific problem: enterprise systems are too often built with conflicting priorities. Design agencies focus on aesthetics while ignoring architecture. Development shops write logic while ignoring the user interface.
               </p>
               <p className="text-brand-muted dark:text-white/70 mb-8 leading-relaxed text-lg">
                 SBS Quantum merges rigorous backend engineering with premium frontend design. We build tools people actually want to use, backed by infrastructure that never fails.
