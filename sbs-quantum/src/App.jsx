@@ -16,7 +16,7 @@ const Contact = lazy(() => import('./pages/Contact'));
 
 function App() {
   return (
-    <BrowserRouter basename="/SBS-Qantum">
+    <BrowserRouter>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Navbar />
