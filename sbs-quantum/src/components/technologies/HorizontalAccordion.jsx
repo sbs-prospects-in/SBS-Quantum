@@ -86,7 +86,7 @@ export default function HorizontalAccordion() {
                         <h3 className="text-3xl md:text-5xl font-display font-bold text-white mb-4 whitespace-normal tracking-tight">
                           {item.title}
                         </h3>
-                        <p className="text-lg md:text-xl text-brand-text/60 dark:text-white/60 leading-relaxed drop-shadow-md">
+                        <p className="text-lg md:text-xl text-white/80 leading-relaxed drop-shadow-md">
                           {item.desc}
                         </p>
                       </motion.div>
@@ -109,7 +109,7 @@ export default function HorizontalAccordion() {
                   
                   {/* Mobile Compressed Title (Horizontal) */}
                   {!isActive && (
-                    <div className="md:hidden absolute bottom-6 left-6">
+                    <div className="md:hidden absolute bottom-6 left-6 drop-shadow-lg z-20">
                       <h3 className="text-xl font-display font-bold text-white opacity-90">
                         {item.title}
                       </h3>

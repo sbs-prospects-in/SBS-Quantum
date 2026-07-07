@@ -70,7 +70,7 @@ export default function AmbientHero() {
   const text2 = "extraordinary.".split("");
 
   return (
-    <section className="relative w-full min-h-[70vh] bg-brand-bg dark:bg-[#020202] flex flex-col items-center justify-center text-center px-4 overflow-hidden border-b border-brand-border dark:border-white/5 transition-colors duration-500">
+    <section className="relative w-full min-h-[70vh] bg-brand-bg dark:bg-[#020202] flex flex-col items-center justify-center text-center px-4 pt-32 pb-16 overflow-hidden border-b border-brand-border dark:border-white/5 transition-colors duration-500">
       
       <motion.div 
         className="absolute inset-0 z-0 pointer-events-none mix-blend-screen"
