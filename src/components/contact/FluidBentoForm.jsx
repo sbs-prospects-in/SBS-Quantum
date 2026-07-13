@@ -157,33 +157,35 @@ export default function FluidBentoForm() {
   };
 
   return (
-    <section className="bg-brand-bg py-24 md:py-32 relative text-brand-text z-10 overflow-hidden" style={{ perspective: 1000 }}>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        
-        <div className="mb-16">
-          <h2 className="text-3xl md:text-5xl font-display font-medium tracking-tight mb-4 text-brand-text">
-            How can we help you?
-          </h2>
-          <p className="text-brand-text/60 text-lg">Hover to feel the 3D magnetism. Click to expand.</p>
-        </div>
+    <>
+      <section className="bg-brand-bg py-24 md:py-32 relative text-brand-text z-10 overflow-hidden" style={{ perspective: 1000 }}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          
+          <div className="mb-16">
+            <h2 className="text-3xl md:text-5xl font-display font-medium tracking-tight mb-4 text-brand-text">
+              How can we help you?
+            </h2>
+            <p className="text-brand-text/60 text-lg">Hover to feel the 3D magnetism. Click to expand.</p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {CONTACT_OPTIONS.map((option) => (
-            <MagneticTiltCard 
-              key={option.id} 
-              option={option} 
-              onClick={setSelectedOption} 
-              isSelected={selectedOption?.id === option.id}
-            />
-          ))}
-        </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {CONTACT_OPTIONS.map((option) => (
+              <MagneticTiltCard 
+                key={option.id} 
+                option={option} 
+                onClick={setSelectedOption} 
+                isSelected={selectedOption?.id === option.id}
+              />
+            ))}
+          </div>
 
-      </div>
+        </div>
+      </section>
 
       {/* Shared Layout Morphing Modal Overlay */}
       <AnimatePresence>
         {selectedOption && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6">
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6" style={{ position: 'fixed' }}>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -298,6 +300,6 @@ export default function FluidBentoForm() {
           </div>
         )}
       </AnimatePresence>
-    </section>
+    </>
   );
 }
