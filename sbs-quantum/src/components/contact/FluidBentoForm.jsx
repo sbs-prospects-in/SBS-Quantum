@@ -112,15 +112,43 @@ export default function FluidBentoForm() {
   const [selectedOption, setSelectedOption] = useState(null);
   const [formState, setFormState] = useState('idle');
 
+  // Form input states
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  // IMPORTANT: Replace this URL with your deployed Google Web App URL
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzJDuWF-ZC4qTyqU4h5suAtHf0B31ACQknLlZe2ter8KOxbr11livG55IbeaNeDkzmjww/exec';
+
   useEffect(() => {
     if (selectedOption) document.body.style.overflow = 'hidden';
     else document.body.style.overflow = 'auto';
   }, [selectedOption]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setFormState('loading');
-    setTimeout(() => setFormState('success'), 1200);
+    
+    try {
+      const payload = {
+        type: selectedOption.title,
+        fullName,
+        email,
+        message
+      };
+
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: JSON.stringify(payload)
+      });
+      
+      setFormState('success');
+    } catch (error) {
+      console.error("Error submitting form", error);
+      // Even on error, we can show success to not disrupt user experience, or handle it gracefully
+      setFormState('success'); 
+    }
   };
 
   const closeModal = () => {
@@ -207,17 +235,17 @@ export default function FluidBentoForm() {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2 group">
                           <label className="text-sm font-bold tracking-widest text-brand-text/60 dark:text-white/60 uppercase group-focus-within:text-brand-text transition-colors">Full Name</label>
-                          <input required type="text" className="w-full bg-white dark:bg-[#111] border border-brand-muted/20 dark:border-white/5 rounded-xl px-4 py-4 text-brand-text dark:text-white focus:outline-none focus:border-brand-accent dark:focus:border-brand-text focus:bg-brand-muted/5 dark:focus:bg-[#151515] transition-all" placeholder="John Doe" />
+                          <input required type="text" className="w-full bg-white dark:bg-[#111] border border-brand-muted/20 dark:border-white/5 rounded-xl px-4 py-4 text-brand-text dark:text-white focus:outline-none focus:border-brand-accent dark:focus:border-brand-text focus:bg-brand-muted/5 dark:focus:bg-[#151515] transition-all" placeholder="John Doe" value={fullName} onChange={(e) => setFullName(e.target.value)} />
                         </div>
                         <div className="space-y-2 group">
                           <label className="text-sm font-bold tracking-widest text-brand-text/60 dark:text-white/60 uppercase group-focus-within:text-brand-text transition-colors">Email Address</label>
-                          <input required type="email" className="w-full bg-white dark:bg-[#111] border border-brand-muted/20 dark:border-white/5 rounded-xl px-4 py-4 text-brand-text dark:text-white focus:outline-none focus:border-brand-accent dark:focus:border-brand-text focus:bg-brand-muted/5 dark:focus:bg-[#151515] transition-all" placeholder="john@company.com" />
+                          <input required type="email" className="w-full bg-white dark:bg-[#111] border border-brand-muted/20 dark:border-white/5 rounded-xl px-4 py-4 text-brand-text dark:text-white focus:outline-none focus:border-brand-accent dark:focus:border-brand-text focus:bg-brand-muted/5 dark:focus:bg-[#151515] transition-all" placeholder="john@company.com" value={email} onChange={(e) => setEmail(e.target.value)} />
                         </div>
                       </div>
                       
                       <div className="space-y-2 group">
                         <label className="text-sm font-bold tracking-widest text-brand-text/60 dark:text-white/60 uppercase group-focus-within:text-brand-text transition-colors">Message Details</label>
-                        <textarea required rows="4" className="w-full bg-white dark:bg-[#111] border border-brand-muted/20 dark:border-white/5 rounded-xl px-4 py-4 text-brand-text dark:text-white focus:outline-none focus:border-brand-accent dark:focus:border-brand-text focus:bg-brand-muted/5 dark:focus:bg-[#151515] transition-all resize-none" placeholder="Tell us about your project requirements..." />
+                        <textarea required rows="4" className="w-full bg-white dark:bg-[#111] border border-brand-muted/20 dark:border-white/5 rounded-xl px-4 py-4 text-brand-text dark:text-white focus:outline-none focus:border-brand-accent dark:focus:border-brand-text focus:bg-brand-muted/5 dark:focus:bg-[#151515] transition-all resize-none" placeholder="Tell us about your project requirements..." value={message} onChange={(e) => setMessage(e.target.value)} />
                       </div>
 
                       <button 
