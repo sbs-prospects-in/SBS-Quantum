@@ -113,7 +113,7 @@ export default function Navbar() {
       <div 
         ref={navRef}
         onMouseLeave={() => setHoverX(null)}
-        className="relative flex items-center justify-between h-16 md:h-20 bg-brand-surface/90 backdrop-blur-2xl rounded-full md:rounded-2xl px-6 lg:px-8 shadow-2xl border border-brand-border transition-colors duration-500"
+        className="relative flex items-center justify-between h-16 lg:h-20 bg-brand-surface/90 backdrop-blur-2xl rounded-full lg:rounded-2xl px-6 lg:px-8 shadow-2xl border border-brand-border transition-colors duration-500"
       >
         <DigitalEntity targetX={hoverX} />
 
@@ -127,7 +127,7 @@ export default function Navbar() {
           </Link>
         </div>
         
-        <div className="hidden md:flex items-center justify-center space-x-2">
+        <div className="hidden lg:flex items-center justify-center space-x-2">
           {NAV_ITEMS.filter(item => item.label !== 'Contact Us').map((item) => {
             if (item.label === 'Services') {
               return (
@@ -137,7 +137,9 @@ export default function Navbar() {
                   onMouseEnter={handleServicesEnter}
                   onMouseLeave={handleServicesLeave}
                 >
-                  <button
+                  <Link
+                    to="/services"
+                    onClick={(e) => handleNavClick('/services', e)}
                     onMouseEnter={handleHoverLink}
                     className={clsx(
                       "flex items-center px-6 py-2.5 text-xs font-bold uppercase tracking-widest transition-colors duration-200 rounded-full",
@@ -148,7 +150,7 @@ export default function Navbar() {
                   >
                     {item.label}
                     <ChevronDown size={14} className={clsx("ml-2 transition-transform", isServicesOpen && "rotate-180")} />
-                  </button>
+                  </Link>
                   
                   <AnimatePresence>
                     {isServicesOpen && (
@@ -162,7 +164,7 @@ export default function Navbar() {
                       >
                         <div className="absolute -top-10 left-0 right-0 h-10 bg-transparent" />
                         
-                        <div className="w-2/3 p-10 grid grid-cols-2 gap-x-8 gap-y-8 relative z-10">
+                        <div className="w-full p-10 grid grid-cols-3 gap-x-8 gap-y-8 relative z-10">
                           {SERVICES.map((service) => (
                             <Link
                               key={service.name}
@@ -177,15 +179,6 @@ export default function Navbar() {
                               </div>
                             </Link>
                           ))}
-                        </div>
-                        <div className="w-1/3 p-1 relative z-10">
-                          <Link to="/services" className="rounded-[1.75rem] bg-brand-text/10 border border-brand-text/20 p-8 text-brand-text h-full flex flex-col justify-center relative overflow-hidden group transition-all duration-300 hover:bg-brand-text hover:border-brand-text">
-                            <h3 className="text-2xl font-display font-bold mb-3 tracking-tight group-hover:text-brand-bg">Explore All Services</h3>
-                            <p className="text-brand-text/60 text-sm mb-8 leading-relaxed group-hover:text-brand-bg/80">Discover how we can transform your business with our tailored expertise.</p>
-                            <span className="inline-flex items-center text-sm font-bold text-brand-text group-hover:translate-x-2 transition-transform group-hover:text-brand-bg">
-                              View full catalog <span className="ml-2">&rarr;</span>
-                            </span>
-                          </Link>
                         </div>
                       </motion.div>
                     )}
@@ -213,7 +206,7 @@ export default function Navbar() {
           })}
         </div>
         
-        <div className="hidden md:flex items-center space-x-3">
+        <div className="hidden lg:flex items-center space-x-3">
           <button
             onClick={toggleTheme}
             className="p-2.5 rounded-full text-brand-text/80 hover:bg-brand-text/10 hover:text-brand-text transition-colors duration-300 active:scale-95"
@@ -231,7 +224,7 @@ export default function Navbar() {
           </Link>
         </div>
         
-        <div className="flex md:hidden">
+        <div className="flex lg:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
             type="button"
@@ -249,24 +242,79 @@ export default function Navbar() {
             animate={{ height: "auto", opacity: 1, y: 0 }}
             exit={{ height: 0, opacity: 0, y: -10 }}
             transition={{ duration: 0.3, type: "spring", bounce: 0.2 }}
-            className="md:hidden mt-4 bg-brand-surface/95 backdrop-blur-2xl rounded-2xl shadow-2xl border border-brand-border overflow-hidden"
+            className="lg:hidden mt-4 bg-brand-surface/95 backdrop-blur-2xl rounded-2xl shadow-2xl border border-brand-border overflow-hidden"
           >
             <div className="px-4 py-6 space-y-2">
-              {NAV_ITEMS.map((item) => (
-                <Link
-                  key={item.label}
-                  to={item.href}
-                  onClick={(e) => handleNavClick(item.href, e)}
-                  className={clsx(
-                    "block px-4 py-3 rounded-xl text-base font-bold uppercase tracking-wider transition-colors",
-                    location.pathname === item.href 
-                      ? "text-brand-text bg-brand-text/5" 
-                      : "text-brand-text/60 hover:text-brand-text hover:bg-brand-text/5"
-                  )}
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {NAV_ITEMS.map((item) => {
+                if (item.label === 'Services') {
+                  return (
+                    <div key={item.label} className="space-y-1">
+                      <div className="w-full flex items-center justify-between px-4 py-3 rounded-xl text-base font-bold uppercase tracking-wider transition-colors hover:bg-brand-text/5">
+                        <Link
+                          to="/services"
+                          onClick={(e) => handleNavClick('/services', e)}
+                          className={clsx(
+                            "flex-1",
+                            location.pathname.startsWith('/services')
+                              ? "text-brand-text"
+                              : "text-brand-text/60 hover:text-brand-text"
+                          )}
+                        >
+                          {item.label}
+                        </Link>
+                        <button
+                          onClick={(e) => {
+                            e.preventDefault();
+                            setIsServicesOpen(!isServicesOpen);
+                          }}
+                          className="p-1 text-brand-text/60 hover:text-brand-text transition-colors"
+                        >
+                          <ChevronDown size={18} className={clsx("transition-transform", isServicesOpen && "rotate-180")} />
+                        </button>
+                      </div>
+                      <AnimatePresence>
+                        {isServicesOpen && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            className="overflow-hidden pl-4 pr-2"
+                          >
+                            <div className="pt-2 pb-3 space-y-1 border-l-2 border-brand-border ml-2 pl-4">
+                              {SERVICES.map((service) => (
+                                <Link
+                                  key={service.name}
+                                  to={`/services/${service.slug}`}
+                                  onClick={(e) => handleNavClick(`/services/${service.slug}`, e)}
+                                  className="block py-2.5 text-sm font-medium text-brand-text/70 hover:text-brand-text transition-colors"
+                                >
+                                  {service.name}
+                                </Link>
+                              ))}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  );
+                }
+
+                return (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    onClick={(e) => handleNavClick(item.href, e)}
+                    className={clsx(
+                      "block px-4 py-3 rounded-xl text-base font-bold uppercase tracking-wider transition-colors",
+                      location.pathname === item.href 
+                        ? "text-brand-text bg-brand-text/5" 
+                        : "text-brand-text/60 hover:text-brand-text hover:bg-brand-text/5"
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
 
               <div className="pt-4 mt-2 border-t border-brand-border flex items-center justify-between px-4">
                 <span className="text-sm font-bold uppercase tracking-wider text-brand-text/80">Theme</span>

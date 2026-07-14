@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { SOCIAL_LINKS, NAV_ITEMS } from '../../lib/constants';
 import { motion } from 'framer-motion';
@@ -8,6 +9,13 @@ import robotImg from '../../assets/robot.svg';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const location = useLocation();
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyPhone = () => {
+    navigator.clipboard.writeText('+919081353523');
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   // Hide the massive footer CTA on pages that already have their own strong bottom CTAs
   // or on the contact page where it is redundant.
@@ -70,8 +78,30 @@ export default function Footer() {
           <div>
             <h3 className="font-display font-semibold text-brand-text dark:text-brand-accent mb-6 tracking-tight text-lg">Contact</h3>
             <ul className="space-y-4 text-brand-muted dark:text-white/70 text-sm">
-              <li className="flex items-center space-x-2"><span>info@sbsquantum.com</span></li>
-              <li className="flex items-center space-x-2"><span>+919081353523</span></li>
+              <li className="flex items-start space-x-2">
+                <a href="https://share.google/k86ZBxZ9HFHpSckyp" target="_blank" rel="noopener noreferrer" className="hover:text-brand-text transition-colors text-left">
+                  1003, Span Trade Center, Pritam Nagar, Paldi, Ahmedabad, Gujarat 380006
+                </a>
+              </li>
+              <li className="flex items-center space-x-2">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sbsquantum@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:text-brand-text transition-colors">
+                  sbsquantum@gmail.com
+                </a>
+              </li>
+              <li className="flex items-center space-x-2">
+                <button 
+                  onClick={handleCopyPhone} 
+                  className="hover:text-brand-text transition-colors flex items-center group relative"
+                  aria-label="Copy phone number"
+                >
+                  <span>+919081353523</span>
+                  {copied && (
+                    <span className="absolute left-full ml-3 px-2 py-1 bg-brand-text text-brand-bg text-xs font-bold rounded shadow-lg whitespace-nowrap">
+                      Copied!
+                    </span>
+                  )}
+                </button>
+              </li>
               <li className="pt-4">
                 <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="inline-flex items-center text-brand-text font-bold transition-colors active:scale-[0.97] ease-[var(--ease-out)] duration-200 group">
                   Get in touch <span className="ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>

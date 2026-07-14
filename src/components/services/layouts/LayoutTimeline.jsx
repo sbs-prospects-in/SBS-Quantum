@@ -21,15 +21,15 @@ export default function LayoutTimeline({ service }) {
             className="relative flex flex-col md:flex-row items-center mb-16 md:mb-32"
           >
             <div className="hidden md:block md:w-1/2 pr-16 text-right">
-              <h2 className="text-4xl font-display font-bold text-brand-text dark:text-white mb-4">The Status Quo</h2>
-              <p className="text-brand-text/50 dark:text-brand-text/60 dark:text-white/60 uppercase tracking-widest text-sm font-bold">What is broken</p>
+              <h2 className="text-4xl font-display font-bold text-brand-text dark:text-white mb-4">{service.labels?.problemTitle || 'The Status Quo'}</h2>
+              <p className="text-brand-text/50 dark:text-brand-text/60 dark:text-white/60 uppercase tracking-widest text-sm font-bold">{service.labels?.problemSubtitle || 'What is broken'}</p>
             </div>
             
             <div className="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-brand-muted/20 border-4 border-white dark:border-[#050505] shadow-sm md:-translate-x-1/2 z-10 -translate-x-[7px] transition-colors duration-500"></div>
             
             <div className="pl-16 md:pl-16 md:w-1/2 w-full">
               <div className="md:hidden mb-4">
-                <h2 className="text-3xl font-display font-bold text-brand-text dark:text-white">The Status Quo</h2>
+                <h2 className="text-3xl font-display font-bold text-brand-text dark:text-white">{service.labels?.problemTitle || 'The Status Quo'}</h2>
               </div>
               <div className="bg-brand-surface dark:bg-[#0a0a0a] border border-brand-border dark:border-white/5 p-8 rounded-2xl transition-colors duration-500">
                 <p className="text-xl text-brand-text/60 dark:text-white/60 dark:text-brand-text/60 dark:text-white/60 leading-relaxed font-medium">
@@ -48,15 +48,15 @@ export default function LayoutTimeline({ service }) {
             className="relative flex flex-col md:flex-row-reverse items-center mb-16 md:mb-32"
           >
             <div className="hidden md:block md:w-1/2 pl-16 text-left">
-              <h2 className="text-4xl font-display font-bold text-brand-text dark:text-white mb-4">Our Intervention</h2>
-              <p className="text-brand-muted uppercase tracking-widest text-sm font-bold">How we fix it</p>
+              <h2 className="text-4xl font-display font-bold text-brand-text dark:text-white mb-4">{service.labels?.approachTitle || 'Our Intervention'}</h2>
+              <p className="text-brand-muted uppercase tracking-widest text-sm font-bold">{service.labels?.approachSubtitle || 'How we fix it'}</p>
             </div>
             
             <div className="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-brand-muted border-4 border-white dark:border-[#050505] shadow-sm md:-translate-x-1/2 z-10 -translate-x-[7px] transition-colors duration-500"></div>
             
             <div className="pl-16 md:pr-16 md:pl-0 md:w-1/2 w-full">
               <div className="md:hidden mb-4">
-                <h2 className="text-3xl font-display font-bold text-brand-text dark:text-white">Our Intervention</h2>
+                <h2 className="text-3xl font-display font-bold text-brand-text dark:text-white">{service.labels?.approachTitle || 'Our Intervention'}</h2>
               </div>
               <div className="bg-brand-text dark:bg-brand-muted/10 p-8 rounded-2xl shadow-xl border border-transparent dark:border-brand-muted/20 transition-colors duration-500">
                 <p className="text-xl text-white dark:text-brand-text leading-relaxed font-medium">
@@ -75,15 +75,15 @@ export default function LayoutTimeline({ service }) {
             className="relative flex flex-col md:flex-row items-start mb-16 md:mb-32"
           >
             <div className="hidden md:block md:w-1/2 pr-16 text-right pt-8">
-              <h2 className="text-4xl font-display font-bold text-brand-text dark:text-white mb-4">The Output</h2>
-              <p className="text-brand-accent uppercase tracking-widest text-sm font-bold">What is delivered</p>
+              <h2 className="text-4xl font-display font-bold text-brand-text dark:text-white mb-4">{service.labels?.deliverablesTitle || 'The Output'}</h2>
+              <p className="text-brand-accent uppercase tracking-widest text-sm font-bold">{service.labels?.deliverablesSubtitle || 'What is delivered'}</p>
             </div>
             
             <div className="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-brand-accent/20 border-4 border-white dark:border-[#050505] shadow-sm md:-translate-x-1/2 z-10 -translate-x-[7px] top-10 transition-colors duration-500"></div>
             
             <div className="pl-16 md:pl-16 md:w-1/2 w-full pt-6">
               <div className="md:hidden mb-6">
-                <h2 className="text-3xl font-display font-bold text-brand-text dark:text-white">The Output</h2>
+                <h2 className="text-3xl font-display font-bold text-brand-text dark:text-white">{service.labels?.deliverablesTitle || 'The Output'}</h2>
               </div>
               <div className="space-y-4">
                 {service.deliverables.map((item, idx) => (

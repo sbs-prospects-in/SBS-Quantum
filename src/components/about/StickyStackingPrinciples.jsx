@@ -20,7 +20,7 @@ const PrincipleCard = ({ principle, index, total }) => {
         opacity,
         top: `calc(15vh + ${index * 30}px)`
       }}
-      className="sticky w-full min-h-[50vh] flex flex-col md:flex-row items-center justify-between p-8 md:p-16 lg:p-20 bg-brand-surface border border-brand-border rounded-[3rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] overflow-hidden origin-top mb-32 transition-colors duration-500"
+      className={`sticky w-full min-h-[50vh] flex flex-col md:flex-row items-center justify-between p-8 md:p-16 lg:p-20 bg-brand-surface border border-brand-border rounded-[3rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] overflow-hidden origin-top transition-colors duration-500 ${index === total - 1 ? 'mb-0' : 'mb-32'}`}
     >
       <div className="absolute inset-0 bg-brand-bg/50 backdrop-blur-3xl z-0 pointer-events-none" />
       
@@ -49,7 +49,7 @@ const PrincipleCard = ({ principle, index, total }) => {
 
 export default function StickyStackingPrinciples({ principles }) {
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative pb-32">
+    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative pb-4">
       <div className="text-center mb-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

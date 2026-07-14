@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence, useSpring, useMotionTemplate, useTransform } from 'framer-motion';
 import { X, ArrowUpRight, MapPin, Clock } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const JOBS = [
   { 
@@ -100,10 +101,13 @@ function JobCard({ job, onClick }) {
           layoutId={`card-image-${job.id}`}
           src={job.img} 
           alt={job.title}
-          className="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-60 group-hover:opacity-40 group-hover:scale-110 transition-all duration-700"
+          className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-40 group-hover:scale-110 transition-all duration-700"
         />
       )}
       
+      {/* Gradient Overlay for Text */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-20 pointer-events-none" />
+
       <div className="absolute inset-0 p-8 flex flex-col justify-end z-30">
         <motion.div
           animate={{ y: isHovered ? -10 : 0 }}
@@ -232,12 +236,19 @@ export default function ExpandableJobGrid() {
                       ))}
                     </ul>
 
-                    <button className="group w-full flex items-center justify-center py-5 bg-brand-text hover:bg-brand-bg text-white dark:text-[#050505] text-lg font-bold uppercase tracking-widest transition-colors duration-300 rounded-xl overflow-hidden relative">
+                    <Link 
+                      to="/contact"
+                      onClick={() => {
+                        setSelectedJob(null);
+                        window.scrollTo(0, 0);
+                      }}
+                      className="group w-full flex items-center justify-center py-5 bg-brand-text dark:bg-white hover:bg-brand-accent dark:hover:bg-white/90 text-white dark:text-black text-lg font-bold uppercase tracking-widest transition-all duration-300 rounded-xl overflow-hidden relative hover:scale-[1.02] active:scale-[0.98]"
+                    >
                       <span className="relative z-10 flex items-center">
                         Submit Application 
                         <ArrowUpRight className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                       </span>
-                    </button>
+                    </Link>
                   </motion.div>
                 </div>
               </div>

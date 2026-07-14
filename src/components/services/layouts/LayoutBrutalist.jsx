@@ -24,7 +24,7 @@ export default function LayoutBrutalist({ service }) {
             <div className="relative z-10">
               <h2 className="text-sm uppercase tracking-widest font-bold text-brand-muted mb-6 flex items-center">
                 <span className="w-8 h-[2px] bg-brand-muted mr-4 inline-block"></span>
-                The Problem
+                {service.labels?.problemTitle || 'The Problem'}
               </h2>
               <p className="text-2xl md:text-3xl leading-relaxed font-medium">
                 {service.problem}
@@ -46,7 +46,7 @@ export default function LayoutBrutalist({ service }) {
             <div className="relative z-10">
               <h2 className="text-sm uppercase tracking-widest font-bold text-brand-muted mb-6 flex items-center">
                 <span className="w-8 h-[2px] bg-brand-muted mr-4 inline-block"></span>
-                Our Approach
+                {service.labels?.approachTitle || 'Our Approach'}
               </h2>
               <p className="text-2xl md:text-3xl leading-relaxed font-medium text-brand-text dark:text-brand-text/60 dark:text-white/60">
                 {service.approach}
@@ -64,7 +64,7 @@ export default function LayoutBrutalist({ service }) {
             transition={{ duration: 0.8 }}
             className="md:col-span-7"
           >
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-text dark:text-white mb-8 md:mb-12">Concrete Deliverables</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-text dark:text-white mb-8 md:mb-12">{service.labels?.deliverablesTitle || 'Concrete Deliverables'}</h2>
             <TerminalDeliverables deliverables={service.deliverables} />
           </motion.div>
 
@@ -82,7 +82,7 @@ export default function LayoutBrutalist({ service }) {
               </p>
               <Link 
                 to="/contact" 
-                className="group relative inline-flex items-center justify-center px-8 py-5 rounded-full bg-white dark:bg-brand-text text-brand-text dark:text-white font-bold text-lg overflow-hidden w-full transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg dark:hover:bg-brand-muted"
+                className="group relative inline-flex items-center justify-center px-8 py-5 rounded-full bg-white dark:bg-brand-text text-brand-text dark:text-black font-bold text-lg overflow-hidden w-full transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg dark:hover:bg-white"
               >
                 <span className="relative z-10 flex items-center">
                   Discuss this service <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />

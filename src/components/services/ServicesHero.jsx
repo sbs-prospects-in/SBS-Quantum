@@ -91,7 +91,7 @@ export default function ServicesHero() {
   const text2 = "SYSTEMS THAT".split("");
 
   return (
-    <section className="relative min-h-[80vh] flex items-center bg-brand-bg overflow-hidden pt-20 border-b border-brand-border/10">
+    <section className="relative min-h-[80vh] flex items-center bg-brand-bg overflow-hidden pt-32 md:pt-40 border-b border-brand-border/10">
       
       {/* Background Interactive Orbit Nodes */}
       <div className="absolute inset-0 z-0 flex items-center justify-center opacity-40">

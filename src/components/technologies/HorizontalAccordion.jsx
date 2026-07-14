@@ -86,6 +86,14 @@ export default function HorizontalAccordion() {
                         <h3 className="text-3xl md:text-5xl font-display font-bold text-white mb-4 whitespace-normal tracking-tight">
                           {item.title}
                         </h3>
+                        <motion.p 
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ delay: 0.2, duration: 0.4 }}
+                          className="text-white/80 text-sm md:text-base md:text-lg leading-relaxed font-medium"
+                        >
+                          {item.desc}
+                        </motion.p>
                       </motion.div>
                     ) : (
                       /* Compressed Vertical Title (Only on Desktop) */

@@ -80,68 +80,35 @@ export default function AboutHero() {
               variants={textVariants}
               className="text-4xl md:text-7xl lg:text-9xl font-display font-black text-brand-text tracking-tighter leading-[0.85]"
             >
-              WE DON'T
+              ONE SPACE,
             </motion.h1>
           </div>
           
-          <div className="overflow-hidden mb-6 flex justify-center items-center gap-4 md:gap-8">
+          <div className="overflow-hidden mb-12 flex justify-center items-center gap-4 md:gap-8">
             <motion.div 
               custom={2}
               initial="hidden"
               animate="visible"
               variants={textVariants}
-              className="h-[2px] w-16 md:w-32 bg-brand-muted hidden sm:block"
+              className="h-[2px] w-8 md:w-16 bg-brand-muted hidden sm:block"
             />
             <motion.h1 
               custom={3}
               initial="hidden"
               animate="visible"
               variants={textVariants}
-              className="text-4xl md:text-7xl lg:text-9xl font-display font-black text-brand-muted tracking-tighter leading-[0.85]"
+              className="text-4xl md:text-6xl lg:text-8xl font-display font-black text-brand-muted tracking-tighter leading-[0.85]"
             >
-              WRITE CODE.
+              YOUR VISION'S PLACE.
             </motion.h1>
             <motion.div 
               custom={2}
               initial="hidden"
               animate="visible"
               variants={textVariants}
-              className="h-[2px] w-16 md:w-32 bg-brand-muted hidden sm:block"
+              className="h-[2px] w-8 md:w-16 bg-brand-muted hidden sm:block"
             />
           </div>
-
-          <div className="overflow-hidden mb-12">
-            <motion.h1 
-              custom={4}
-              initial="hidden"
-              animate="visible"
-              variants={textVariants}
-              className="text-4xl md:text-7xl lg:text-9xl font-display font-black text-brand-text tracking-tighter leading-[0.85]"
-            >
-              WE ENGINEER <br className="md:hidden" />
-              <span className="relative inline-block">
-                <span className="relative z-10">LEVERAGE.</span>
-                <motion.span 
-                  initial={{ width: 0 }}
-                  animate={{ width: '100%' }}
-                  transition={{ delay: 1, duration: 0.8, ease: "circOut" }}
-                  className="absolute bottom-1 md:bottom-3 left-0 h-2 md:h-4 bg-brand-muted/30 -z-10"
-                />
-              </span>
-            </motion.h1>
-          </div>
-
-          <motion.div
-            custom={5}
-            initial="hidden"
-            animate="visible"
-            variants={textVariants}
-            className="flex flex-col md:flex-row items-center justify-center gap-8 text-left max-w-3xl mx-auto"
-          >
-            <p className="text-xl md:text-2xl text-brand-accent dark:text-white/80 font-medium leading-relaxed border-l-2 border-brand-muted/30 pl-6">
-              Most agencies sell you hours. We sell you extreme operational capacity. We strip away the bloat and build bespoke systems that give you an unfair advantage.
-            </p>
-          </motion.div>
         </motion.div>
 
       </div>

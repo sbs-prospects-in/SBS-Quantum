@@ -31,7 +31,7 @@ export default function About() {
       {/* Brand new Out-of-the-box interactive Hero */}
       <AboutHero />
 
-      <div className="bg-brand-bg dark:bg-[#050505] transition-colors duration-500 pb-32">
+      <div className="bg-brand-bg dark:bg-[#050505] transition-colors duration-500 pb-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* The Vision (Image + Text) */}
@@ -82,38 +82,6 @@ export default function About() {
             <StickyStackingPrinciples principles={PRINCIPLES} />
           </div>
 
-          {/* Refined Timeline */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
-          >
-            <h2 className="text-3xl font-display font-bold text-brand-text dark:text-brand-accent mb-16 text-center">Company Milestones</h2>
-            <div className="relative border-l-2 border-brand-muted/20 ml-4 md:ml-0 md:border-l-0 md:border-t-2 md:flex justify-between pt-8 md:pt-16">
-              
-              {[
-                { year: '2020', title: 'The Launch', desc: 'SBS Quantum opens its doors in New York, securing three enterprise contracts in month one.' },
-                { year: '2022', title: 'European Expansion', desc: 'Opened our London office to handle the growing European client base and recruit global engineering talent.' },
-                { year: '2024', title: 'AI Integration Practice', desc: 'Launched our dedicated AI division, implementing custom LLMs for Fortune 500 logistics firms.' },
-                { year: '2026', title: 'Proprietary Cloud', desc: 'Released our internal cloud optimization tooling to all active clients, cutting AWS costs by 30%.' }
-              ].map((milestone, idx) => (
-                <motion.div 
-                  key={idx} 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.2 }}
-                  className="relative mb-12 md:mb-0 ml-8 md:ml-0 md:w-1/4 md:px-6 group"
-                >
-                  <div className="absolute w-4 h-4 rounded-full bg-brand-text -left-[41px] md:left-1/2 md:-top-[74px] md:-translate-x-1/2 ring-4 ring-white group-hover:scale-150 transition-transform duration-300 shadow-md"></div>
-                  <h3 className="text-brand-muted font-black text-2xl mb-3">{milestone.year}</h3>
-                  <h4 className="text-brand-text dark:text-brand-accent-light font-bold text-lg mb-2">{milestone.title}</h4>
-                  <p className="text-brand-muted dark:text-white/70 text-sm leading-relaxed">{milestone.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
 
         </div>
       </div>

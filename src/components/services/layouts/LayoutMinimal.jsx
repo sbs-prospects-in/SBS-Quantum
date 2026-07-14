@@ -21,7 +21,7 @@ export default function LayoutMinimal({ service }) {
           transition={{ duration: 1, ease: [0.21, 0.47, 0.32, 0.98] }}
           className="mb-16 md:mb-32"
         >
-          <span className="inline-block py-1 px-3 rounded-full bg-brand-muted/20 text-brand-muted border border-brand-muted/40 text-xs font-bold tracking-widest uppercase mb-8">The Friction</span>
+          <span className="inline-block py-1 px-3 rounded-full bg-brand-muted/20 text-brand-muted border border-brand-muted/40 text-xs font-bold tracking-widest uppercase mb-8">{service.labels?.problemTitle || 'The Friction'}</span>
           <h2 className="text-3xl md:text-5xl font-display font-bold text-brand-text dark:text-white leading-tight mb-8">
             {service.problem}
           </h2>
@@ -35,7 +35,7 @@ export default function LayoutMinimal({ service }) {
           transition={{ duration: 1, ease: [0.21, 0.47, 0.32, 0.98] }}
           className="mb-16 md:mb-32 bg-white dark:bg-[#0a0a0a] p-8 md:p-12 lg:p-20 rounded-[3rem] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.05)] border border-brand-muted/10 dark:border-white/5 transition-colors duration-500"
         >
-          <span className="inline-block py-1 px-3 rounded-full bg-brand-muted/10 dark:bg-white/5 text-brand-text dark:text-white text-xs font-bold tracking-widest uppercase mb-8">The Solution</span>
+          <span className="inline-block py-1 px-3 rounded-full bg-brand-muted/10 dark:bg-white/5 text-brand-text dark:text-white text-xs font-bold tracking-widest uppercase mb-8">{service.labels?.approachTitle || 'The Solution'}</span>
           <p className="text-2xl md:text-3xl leading-relaxed font-medium text-brand-text/80 dark:text-brand-text/60 dark:text-white/60">
             {service.approach}
           </p>
@@ -49,7 +49,7 @@ export default function LayoutMinimal({ service }) {
           transition={{ duration: 1, ease: [0.21, 0.47, 0.32, 0.98] }}
           className="mb-16 md:mb-32 text-left bg-white dark:bg-[#0a0a0a] p-8 md:p-12 rounded-[3rem] shadow-sm border border-brand-muted/10 dark:border-white/5 transition-colors duration-500"
         >
-          <h3 className="text-2xl font-display font-bold text-brand-text dark:text-white mb-8">What you receive:</h3>
+          <h3 className="text-2xl font-display font-bold text-brand-text dark:text-white mb-8">{service.labels?.deliverablesTitle || 'What you receive:'}</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {service.deliverables.map((item, idx) => (
               <div key={idx} className="flex items-start">
@@ -69,7 +69,7 @@ export default function LayoutMinimal({ service }) {
         >
           <Link 
             to="/contact" 
-            className="group inline-flex items-center justify-center px-10 py-5 rounded-full bg-brand-text dark:bg-white text-white dark:text-black font-bold text-xl hover:bg-black dark:hover:bg-black/5 dark:bg-white/5 transition-colors shadow-xl hover:shadow-2xl active:scale-95 duration-300"
+            className="group inline-flex items-center justify-center px-10 py-5 rounded-full bg-brand-text dark:bg-white text-white dark:text-black font-bold text-xl hover:bg-black dark:hover:bg-white/90 transition-colors shadow-xl hover:shadow-2xl active:scale-95 duration-300"
           >
             Start this project <ArrowRight className="ml-3 group-hover:translate-x-2 transition-transform" size={24} />
           </Link>

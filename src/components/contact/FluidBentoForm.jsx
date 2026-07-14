@@ -115,9 +115,10 @@ export default function FluidBentoForm() {
   // Form input states
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
+  const [mobile, setMobile] = useState('');
   const [message, setMessage] = useState('');
 
-  // IMPORTANT: Replace this URL with your deployed Google Web App URL
+  // IMPORTANT: Replace this URL with your deployed Google Web App URL created from the official sbsquantum@gmail.com account
   const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzJDuWF-ZC4qTyqU4h5suAtHf0B31ACQknLlZe2ter8KOxbr11livG55IbeaNeDkzmjww/exec';
 
   useEffect(() => {
@@ -134,6 +135,7 @@ export default function FluidBentoForm() {
         type: selectedOption.title,
         fullName,
         email,
+        mobile,
         message
       };
 
@@ -237,22 +239,27 @@ export default function FluidBentoForm() {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2 group">
                           <label className="text-sm font-bold tracking-widest text-brand-text/60 dark:text-white/60 uppercase group-focus-within:text-brand-text transition-colors">Full Name</label>
-                          <input required type="text" className="w-full bg-white dark:bg-[#111] border border-brand-muted/20 dark:border-white/5 rounded-xl px-4 py-4 text-brand-text dark:text-white focus:outline-none focus:border-brand-accent dark:focus:border-brand-text focus:bg-brand-muted/5 dark:focus:bg-[#151515] transition-all" placeholder="John Doe" value={fullName} onChange={(e) => setFullName(e.target.value)} />
+                          <input required type="text" className="w-full bg-white dark:bg-[#111] border border-brand-muted/20 dark:border-white/5 rounded-xl px-4 py-4 text-brand-text dark:text-white focus:outline-none focus:border-brand-accent dark:focus:border-brand-text focus:bg-brand-muted/5 dark:focus:bg-[#151515] transition-all" value={fullName} onChange={(e) => setFullName(e.target.value)} />
                         </div>
                         <div className="space-y-2 group">
                           <label className="text-sm font-bold tracking-widest text-brand-text/60 dark:text-white/60 uppercase group-focus-within:text-brand-text transition-colors">Email Address</label>
-                          <input required type="email" className="w-full bg-white dark:bg-[#111] border border-brand-muted/20 dark:border-white/5 rounded-xl px-4 py-4 text-brand-text dark:text-white focus:outline-none focus:border-brand-accent dark:focus:border-brand-text focus:bg-brand-muted/5 dark:focus:bg-[#151515] transition-all" placeholder="john@company.com" value={email} onChange={(e) => setEmail(e.target.value)} />
+                          <input required type="email" className="w-full bg-white dark:bg-[#111] border border-brand-muted/20 dark:border-white/5 rounded-xl px-4 py-4 text-brand-text dark:text-white focus:outline-none focus:border-brand-accent dark:focus:border-brand-text focus:bg-brand-muted/5 dark:focus:bg-[#151515] transition-all" value={email} onChange={(e) => setEmail(e.target.value)} />
                         </div>
                       </div>
                       
                       <div className="space-y-2 group">
+                        <label className="text-sm font-bold tracking-widest text-brand-text/60 dark:text-white/60 uppercase group-focus-within:text-brand-text transition-colors">Mobile Number</label>
+                        <input required type="tel" className="w-full bg-white dark:bg-[#111] border border-brand-muted/20 dark:border-white/5 rounded-xl px-4 py-4 text-brand-text dark:text-white focus:outline-none focus:border-brand-accent dark:focus:border-brand-text focus:bg-brand-muted/5 dark:focus:bg-[#151515] transition-all" value={mobile} onChange={(e) => setMobile(e.target.value)} />
+                      </div>
+                      
+                      <div className="space-y-2 group">
                         <label className="text-sm font-bold tracking-widest text-brand-text/60 dark:text-white/60 uppercase group-focus-within:text-brand-text transition-colors">Message Details</label>
-                        <textarea required rows="4" className="w-full bg-white dark:bg-[#111] border border-brand-muted/20 dark:border-white/5 rounded-xl px-4 py-4 text-brand-text dark:text-white focus:outline-none focus:border-brand-accent dark:focus:border-brand-text focus:bg-brand-muted/5 dark:focus:bg-[#151515] transition-all resize-none" placeholder="Tell us about your project requirements..." value={message} onChange={(e) => setMessage(e.target.value)} />
+                        <textarea required rows="4" className="w-full bg-white dark:bg-[#111] border border-brand-muted/20 dark:border-white/5 rounded-xl px-4 py-4 text-brand-text dark:text-white focus:outline-none focus:border-brand-accent dark:focus:border-brand-text focus:bg-brand-muted/5 dark:focus:bg-[#151515] transition-all resize-none" value={message} onChange={(e) => setMessage(e.target.value)} />
                       </div>
 
                       <button 
                         type="submit"
-                        className="w-full bg-brand-text dark:bg-white hover:bg-brand-accent dark:hover:bg-black/5 dark:bg-white/5 text-white dark:text-black font-bold uppercase tracking-widest py-5 rounded-xl transition-all mt-8 flex items-center justify-center group hover:scale-[1.02] active:scale-[0.98]"
+                        className="w-full bg-brand-text dark:bg-white hover:bg-brand-accent dark:hover:bg-white/90 text-white dark:text-black font-bold uppercase tracking-widest py-5 rounded-xl transition-all mt-8 flex items-center justify-center group hover:scale-[1.02] active:scale-[0.98]"
                       >
                         Submit Request <ArrowRight size={20} className="ml-2 group-hover:translate-x-2 transition-transform" />
                       </button>

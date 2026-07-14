@@ -4,19 +4,19 @@ import { MapPin } from 'lucide-react';
 
 const LOCATIONS = [
   { 
-    city: 'New York', 
-    address: 'One World Trade Center\nSuite 4500\nNew York, NY 10007',
-    img: 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&q=80&w=1200'
+    city: 'Canada', 
+    address: 'First Canadian Place\nSuite 5000\nToronto, ON M5X 1A9',
+    img: 'https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&q=80&w=1200'
   },
   { 
-    city: 'London', 
-    address: 'One Canada Square\nLevel 39\nLondon E14 5AB',
-    img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&q=80&w=1200'
+    city: 'Dubai', 
+    address: 'Burj Khalifa\nCorporate Suites\nDowntown Dubai, UAE',
+    img: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=1200'
   },
   { 
-    city: 'Tokyo', 
-    address: 'Roppongi Hills Mori Tower\nFloor 42\nMinato City, Tokyo 106-6108',
-    img: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&q=80&w=1200'
+    city: 'Australia', 
+    address: 'Australia Square\nLevel 40\nSydney NSW 2000',
+    img: 'https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&q=80&w=1200'
   }
 ];
 
@@ -72,15 +72,15 @@ export default function CinematicLocations() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent z-10 transition-opacity duration-700 pointer-events-none" />
 
               <div className="absolute inset-0 p-10 flex flex-col justify-end z-20 pointer-events-none">
-                <div className="flex items-center space-x-3 mb-4 text-brand-text transform group-hover:-translate-y-2 transition-transform duration-500">
+                <div className="flex items-center space-x-3 mb-4 text-white transform group-hover:-translate-y-2 transition-transform duration-500">
                   <MapPin size={24} />
-                  <h3 className="text-3xl font-display font-medium text-brand-text dark:text-white drop-shadow-lg">
+                  <h3 className="text-3xl font-display font-medium text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                     {loc.city}
                   </h3>
                 </div>
                 
                 <div className="overflow-hidden">
-                  <p className="text-brand-text/80 dark:text-brand-text/60 dark:text-white/60 leading-relaxed whitespace-pre-line transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out drop-shadow-md">
+                  <p className="text-white/90 leading-relaxed whitespace-pre-line transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                     {loc.address}
                   </p>
                 </div>
