@@ -41,7 +41,7 @@ export default function Footer() {
               <img src={logoImg} alt="SBS Quantum Logo" className="h-12 w-auto" style={{ filter: 'brightness(0) saturate(100%) invert(56%) sepia(50%) saturate(464%) hue-rotate(352deg) brightness(88%) contrast(93%)' }} />
             </Link>
             <p className="text-brand-muted dark:text-white/70 max-w-sm mb-8 text-sm leading-relaxed">
-              Engineering modern IT solutions with credibility, technical competence, and an uncompromising premium design sensibility. Founded by Urval Shash.
+              Engineering modern IT solutions with credibility, technical competence, and an uncompromising premium design sensibility. Founded by Urval Shah.
             </p>
             <div className="flex space-x-4">
               {SOCIAL_LINKS.map((social) => (
