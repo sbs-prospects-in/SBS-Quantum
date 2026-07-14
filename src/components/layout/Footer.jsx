@@ -71,7 +71,7 @@ export default function Footer() {
             <h3 className="font-display font-semibold text-brand-text dark:text-brand-accent mb-6 tracking-tight text-lg">Contact</h3>
             <ul className="space-y-4 text-brand-muted dark:text-white/70 text-sm">
               <li className="flex items-center space-x-2"><span>info@sbsquantum.com</span></li>
-              <li className="flex items-center space-x-2"><span>+1 (555) 123-4567</span></li>
+              <li className="flex items-center space-x-2"><span>+919081353523</span></li>
               <li className="pt-4">
                 <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="inline-flex items-center text-brand-text font-bold transition-colors active:scale-[0.97] ease-[var(--ease-out)] duration-200 group">
                   Get in touch <span className="ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
