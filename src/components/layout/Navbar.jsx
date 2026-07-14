@@ -217,6 +217,7 @@ export default function Navbar() {
           
           <Link 
             to="/contact"
+            onClick={(e) => handleNavClick('/contact', e)}
             onMouseEnter={handleHoverLink}
             className="px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest bg-brand-block-secondary text-brand-block-text hover:bg-brand-block-primary transition-colors duration-300 shadow-md"
           >

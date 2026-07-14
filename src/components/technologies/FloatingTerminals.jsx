@@ -55,21 +55,21 @@ export default function FloatingTerminals() {
   const constraintsRef = useRef(null);
   
   return (
-    <section className="bg-brand-bg py-32 overflow-hidden relative min-h-[1000px] flex items-center justify-center">
+    <section className="bg-brand-bg py-24 md:py-32 overflow-hidden relative min-h-[1000px] flex flex-col items-center">
       
       <div className="absolute inset-0 pointer-events-none opacity-20">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,rgba(190,140,83,0.3)_0%,transparent_70%)]"></div>
       </div>
 
-      <div className="absolute top-32 left-1/2 -translate-x-1/2 text-center z-0 w-full max-w-3xl px-4">
+      <div className="relative text-center z-20 w-full max-w-3xl px-4 mt-8 md:mt-12 mb-16">
         <p className="text-brand-text font-mono text-sm tracking-widest uppercase mb-4">SYSTEM INFRASTRUCTURE ARCHITECTURE</p>
         <h2 className="text-5xl md:text-7xl font-display font-bold text-brand-text dark:text-brand-accent-light uppercase tracking-tight mb-6">
-          Interactive Topology Simulation
+          Interactive<br/>Simulation
         </h2>
         <p className="text-brand-text/60 text-xl font-medium">Interact with the environment by dragging the individual service nodes.</p>
       </div>
 
-      <div ref={constraintsRef} className="w-full max-w-6xl h-[600px] relative z-10 mx-auto mt-40 flex items-center justify-center">
+      <div ref={constraintsRef} className="w-full max-w-6xl h-[600px] relative z-10 mx-auto flex items-center justify-center">
         {TECH_DATA.map((tech) => (
           <FloatingTerminal key={tech.id} tech={tech} constraintsRef={constraintsRef} />
         ))}

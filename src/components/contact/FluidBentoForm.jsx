@@ -249,7 +249,10 @@ export default function FluidBentoForm() {
                       
                       <div className="space-y-2 group">
                         <label className="text-sm font-bold tracking-widest text-brand-text/60 dark:text-white/60 uppercase group-focus-within:text-brand-text transition-colors">Mobile Number</label>
-                        <input required type="tel" className="w-full bg-white dark:bg-[#111] border border-brand-muted/20 dark:border-white/5 rounded-xl px-4 py-4 text-brand-text dark:text-white focus:outline-none focus:border-brand-accent dark:focus:border-brand-text focus:bg-brand-muted/5 dark:focus:bg-[#151515] transition-all" value={mobile} onChange={(e) => setMobile(e.target.value)} />
+                        <input required type="tel" inputMode="numeric" pattern="[0-9]{10}" maxLength={10} className="w-full bg-white dark:bg-[#111] border border-brand-muted/20 dark:border-white/5 rounded-xl px-4 py-4 text-brand-text dark:text-white focus:outline-none focus:border-brand-accent dark:focus:border-brand-text focus:bg-brand-muted/5 dark:focus:bg-[#151515] transition-all" value={mobile} onChange={(e) => {
+                          const val = e.target.value.replace(/\D/g, '');
+                          if (val.length <= 10) setMobile(val);
+                        }} />
                       </div>
                       
                       <div className="space-y-2 group">

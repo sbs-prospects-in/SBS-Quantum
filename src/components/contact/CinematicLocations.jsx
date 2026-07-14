@@ -72,17 +72,11 @@ export default function CinematicLocations() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent z-10 transition-opacity duration-700 pointer-events-none" />
 
               <div className="absolute inset-0 p-10 flex flex-col justify-end z-20 pointer-events-none">
-                <div className="flex items-center space-x-3 mb-4 text-white transform group-hover:-translate-y-2 transition-transform duration-500">
+                <div className="flex items-center space-x-3 mb-4 text-white transition-transform duration-500">
                   <MapPin size={24} />
                   <h3 className="text-3xl font-display font-medium text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                     {loc.city}
                   </h3>
-                </div>
-                
-                <div className="overflow-hidden">
-                  <p className="text-white/90 leading-relaxed whitespace-pre-line transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                    {loc.address}
-                  </p>
                 </div>
               </div>
             </motion.div>
