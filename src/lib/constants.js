@@ -1,4 +1,5 @@
 import { FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export const NAV_ITEMS = [
   { label: "Home", href: "/" },
@@ -13,6 +14,7 @@ export const SOCIAL_LINKS = [
   { label: "LinkedIn", href: "https://www.linkedin.com/company/135146927/admin/dashboard/?editPageActiveTab=info", icon: FaLinkedin },
   { label: "Instagram", href: "https://www.instagram.com/sbsquantum", icon: FaInstagram },
   { label: "YouTube", href: "https://www.youtube.com/channel/UC6eRK3UUv6XLm8vZUXOUMlA", icon: FaYoutube },
+  { label: "X", href: "https://x.com/sbsquantum27", icon: FaXTwitter },
 ];
 
 export const BRAND_COLORS = {
