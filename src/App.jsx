@@ -13,6 +13,8 @@ const ServiceDetail = lazy(() => import('./pages/ServiceDetail'));
 const Technologies = lazy(() => import('./pages/Technologies'));
 const Career = lazy(() => import('./pages/Career'));
 const Contact = lazy(() => import('./pages/Contact'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const TermsOfUse = lazy(() => import('./pages/TermsOfUse'));
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
               <Route path="/technologies" element={<Technologies />} />
               <Route path="/career" element={<Career />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/privacy" element={<PrivacyPolicy />} />
+              <Route path="/terms" element={<TermsOfUse />} />
             </Routes>
           </Suspense>
         </main>

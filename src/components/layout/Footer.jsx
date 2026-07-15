@@ -102,6 +102,11 @@ export default function Footer() {
                   )}
                 </button>
               </li>
+              <li className="flex flex-col space-y-1 mt-4">
+                <span className="font-semibold text-brand-text dark:text-brand-accent">Business Hours:</span>
+                <span>Mon - Sat: 10:00 AM - 7:00 PM</span>
+                <span>Sun: On Advance Appointment Basis</span>
+              </li>
               <li className="pt-4">
                 <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="inline-flex items-center text-brand-text font-bold transition-colors active:scale-[0.97] ease-[var(--ease-out)] duration-200 group">
                   Get in touch <span className="ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
@@ -123,8 +128,8 @@ export default function Footer() {
         <div className="border-t border-brand-muted/20 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-brand-text/60 relative z-20">
           <p>&copy; {currentYear} SBS Quantum. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link to="#" className="hover:text-brand-text transition-colors">Privacy Policy</Link>
-            <Link to="#" className="hover:text-brand-text transition-colors">Terms of Service</Link>
+            <Link to="/privacy" onClick={() => window.scrollTo(0, 0)} className="hover:text-brand-text transition-colors">Privacy Policy</Link>
+            <Link to="/terms" onClick={() => window.scrollTo(0, 0)} className="hover:text-brand-text transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
