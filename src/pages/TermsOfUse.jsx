@@ -1,5 +1,7 @@
 import PageWrapper from '../components/layout/PageWrapper';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 
 export default function TermsOfUse() {
   return (
@@ -11,6 +13,11 @@ export default function TermsOfUse() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
+            <Link to="/" onClick={() => window.scrollTo(0, 0)} className="inline-flex items-center text-brand-muted hover:text-brand-text transition-colors mb-8 group font-medium">
+              <ArrowLeft size={20} className="mr-2 group-hover:-translate-x-1 transition-transform" />
+              Back to Home
+            </Link>
+
             <h1 className="text-4xl md:text-5xl font-display font-bold text-brand-text dark:text-brand-accent-light mb-8">
               Terms of Use
             </h1>
